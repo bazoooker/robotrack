@@ -1,0 +1,29 @@
+.link {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+	.link-text {
+		border-bottom: 1px dashed;
+		display: inline-block;
+		margin: 0 6px 0 0;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+	.link-icon {}
+}
+
+.link-theme {
+	transition: 300ms;
+	svg {transition: 300ms;}
+	&:hover {
+		svg {
+			transform: translateX(4px);
+		}
+		color: $secondary;
+		path {
+			fill: $secondary;
+			stroke: $secondary;
+		}
+	}
+}

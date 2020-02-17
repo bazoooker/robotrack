@@ -1,2 +1,54 @@
-/*custom styles*/
+.btn {
+	position: relative;
+	display: inline-block;
+	padding: 17px 30px;
+	border-radius: 40px;
+	text-decoration: none;
+	cursor: pointer;
+	color: #fff !important;
+	font-family: $font-primary;
+	border: 0;
+	z-index: 1;
+	overflow: hidden;
+	transition: 300ms;
+	.btn-hover {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 102%;
+		height: 102%;
+		@include gradient-red;
+		border-radius: 40px;
+		z-index: -1;
+		transition: 300ms;
+		opacity: 0;
+		// transform: translateY(-100%);
+	}
+	.btn-text {
+		z-index: 2;
+	}
+}
+
+.btn-primary {}
+.btn-secondary {
+	&:hover {
+		animation: anim-btn 300ms;
+		.btn-hover {
+			opacity: 1;
+		}
+	}
+}
+
+// @keyframes anim-btn {
+// 	0% {
+// 		transform: none;
+// 	}
+// 	50% {
+// 		transform: translateY(2px);
+// 	}
+// 	100% {
+// 		transform: none;
+// 	}
+// }
+
 

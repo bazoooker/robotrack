@@ -15,15 +15,10 @@
 @import "libs/ion-rangeslider";
 @import "libs/swiper.min";
 
+@import "components/header";
+@import "components/hero";
 @import "components/btn";
-
-
-h2 {}
-
-h1 {
-    color: black;
-    background-repeat: no-repeat;
-}
+@import "components/link";
 
 
 

@@ -1,7 +1,9 @@
 
 body {
-    // font-family: $font-secondary;
+    font-family: $font-secondary;
+    color: #2E2E2E;
     font-weight: 400;
+    @include font-size(14);
 }
 
 h1,
@@ -10,16 +12,21 @@ h3,
 h4,
 h5,
 h6 {
-    // font-family: $font-primary;
+    font-family: $font-primary;
 }
 
-h1 { @include font-size(60); }
-h2 { @include font-size(50); }
-h3 { @include font-size(40); }
-h4 { @include font-size(34); }
-h5 { @include font-size(28); }
-h6 { @include font-size(24); }
 
+h1 { @include font-size(34); }
+h2 { @include font-size(32); } 
+h3 { @include font-size(28); }
+h4 { @include font-size(24); }
+h5 { @include font-size(20); }
+
+.h1 { @include font-size(34); }
+.h2 { @include font-size(32); } 
+.h3 { @include font-size(28); }
+.h4 { @include font-size(24); }
+.h5 { @include font-size(20); }
 
 p {
     // margin-top: 0;

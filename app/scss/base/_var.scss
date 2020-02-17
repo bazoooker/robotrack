@@ -1,14 +1,16 @@
+$font-primary: 'Russo One', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+
 
 // bootstrap colors
-$primary:       green;
-$secondary:     black;
-$success:       red;
+$primary:       #25A1F5;
+$secondary:     #FF4249;
+$success:       green;
 $info:          red;
 $warning:       red;
-$danger:        red;
-$light:         red;
-$dark:          red;
-$dark:          red;
+$danger:        #FF4249;
+$light:         lightgray;
+$dark:          #2E2E2E;
 
 
 
@@ -21,7 +23,7 @@ $spacer: 30px;
 
 
 // Body
-$body-color:                lightgray;
+$body-color:                $dark;
 
 
 

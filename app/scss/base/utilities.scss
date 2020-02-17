@@ -8,15 +8,25 @@
 .text-right 		{}
 .text-small 		{}
 .text-extrasmall 	{}
-.text-big 			{}
+.text-big 			{
+	@include font-size(16px);
+	font-weight: 500;
+}
 .text-extrabig 		{}
 .text-uppercase 	{}
 .text-lowercase 	{}
 
-
-
+.font-primary {
+	font-family: $font-primary;
+}
+.font-secondary {
+	font-family: $font-secondary;
+}
 
 /*color utilities*/
 
 
 /*flow utilities*/
+.wrapper {
+	padding-top: 102px;	
+}

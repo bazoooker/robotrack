@@ -40,8 +40,22 @@
 }
 
 
+@mixin gradient-lightblue {
+    background: rgb(0,209,255);
+    background: linear-gradient(104deg, rgba(0,209,255,1) 0%, rgba(15,240,227,1) 56%);
+}
 
+@mixin gradient-darkblue {
+    background: rgb(16,179,241);
+    background: linear-gradient(304deg, rgba(16,179,241,1) 0%, rgba(96,112,255,1) 56%);
+}
 
+@mixin gradient-red {
+    background: rgb(255,99,105);
+    background: -webkit-linear-gradient(23deg, rgba(255,99,105,1) 0%, rgba(254,155,80,1) 59%);
+    background: -o-linear-gradient(23deg, rgba(255,99,105,1) 0%, rgba(254,155,80,1) 59%);
+    background: linear-gradient(113deg, rgba(255,99,105,1) 0%, rgba(254,155,80,1) 59%);
+}
 
 
 

@@ -1,0 +1,109 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 102px;
+	.container {
+		height: 100%;
+		@include flex-row(nowrap, flex-start, center);
+	}
+	.logo {
+		position: relative;
+		flex: 0 0 255px;
+		width: 255px;
+		height: 56px;
+		z-index: 1;
+		.deco-wave {
+			position: absolute;
+			right: 0;
+			bottom: -300px;
+			width: 1200px;
+			height: 600px;
+			z-index: -1;
+			pointer-events: none;
+		}
+		svg:nth-child(1) {
+			position: absolute;
+		    right: -306px;
+		    bottom: 20px;
+		    width: 100%;
+		    z-index: -1;
+		}
+		svg:nth-child(2) {
+			position: absolute;
+		    right: -267px;
+		    bottom: -124px;
+		    width: 100%;
+		    z-index: -2;
+		}
+	}
+	.header-nav {
+		margin: 0 55px 0 auto;
+		height: 100%;
+		@include flex-row(nowrap, flex-start, center);
+	}
+	.header-nav-link {
+		position: relative;
+		margin: 0 2px;
+		padding: 5px 12px;
+		text-decoration: none;
+		font-weight: 500;
+		color: $dark;
+		z-index: 1;
+		transition: 300ms;
+		user-select: none;
+		&.accented {
+			&::after {
+				@include pseudo;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: 2px;
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				background-color: $secondary;
+				transition: 300ms;
+			}
+		}
+		// &:active::before,
+		// &:focus::before {
+		// 	background-color: darken($secondary, 17%);
+		// }
+		&::before {
+			@include pseudo;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			height: 100%;
+			background-color: $secondary;
+			z-index: -1;
+			pointer-events: none;
+			border-radius: 25px;
+			transform: translate(-50%, -50%) scale(.8);
+			transition: 300ms;
+			opacity: 0;
+		}
+		// раскоментить
+		// &:hover {
+		// 	&.accented::after {
+		// 		bottom: -7px;
+		// 	}
+		// 	&::before {
+		// 		transform: translate(-50%, -50%) scale(1);
+		// 		opacity: 1;
+		// 	}
+		// 	color: #fff;
+
+		// }
+	}
+	.header-tel {
+		@include flex-row(nowrap,flex-start,center);
+		font-family: $font-primary;
+		text-decoration: none;
+		svg {
+			margin: 0 14px 0 0;
+		}
+	}
+}
