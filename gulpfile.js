@@ -30,9 +30,9 @@ function beautifyHtml() {
 function scripts() {
 	return src('app/js/**/*.js')
         .pipe(plumber())
-    	.pipe(concat('main.js'))
+    	.pipe(concat('libs.js'))
         .pipe(uglify())
-        .pipe(rename("main.min.js"))
+        .pipe(rename("libs.min.js"))
     	.pipe(dest('dist/js'))
     	.pipe(browserSync.stream());
 };

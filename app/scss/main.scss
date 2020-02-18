@@ -14,12 +14,240 @@
 @import "libs/grtyoutube-popup";
 @import "libs/ion-rangeslider";
 @import "libs/swiper.min";
+@import "libs/nice-select";
 
 @import "components/header";
 @import "components/hero";
 @import "components/btn";
 @import "components/link";
+@import "components/features";
+@import "components/img-decorated";
+@import "components/form";
+@import "components/photo";
 
+
+// ==============================
+// ОГЛАВЛЕНИЕ ДЛЯ ПОИСКА
+
+
+// секции
+// пагинация слайдера
+// карточка (курса или сотрудника)
+// отзывы
+
+// =========================
+
+
+
+
+
+
+
+
+
+
+// секции
+
+.section-courses {
+	margin: 0 0 220px 0;
+}
+.section-form {
+	margin: 0 0 320px 0;
+}
+
+
+.slider-team {
+	position: relative;
+	margin: 0 -30px 0 -30px;
+	z-index: 1;
+	&::before {
+		position: absolute;
+		content: '';
+		width: 25px;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 2;
+		background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	}
+	&::after {
+		position: absolute;
+		content: '';
+		width: 25px;
+		height: 100%;
+		right: 0;
+		top: 0;
+		z-index: 2;
+		background: rgb(255,255,255);
+        background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	}
+}
+
+
+// пагинация слайдера
+.theme-pagination {
+	&.bottom-50 {
+		bottom: 50px;
+		left: -25px;
+		top: auto;
+	}
+	&.bottom-30 {
+		bottom: 30px;
+		top: auto;
+	}
+	.swiper-pagination-bullet {
+		opacity: 1;
+		width: 12px;
+		height: 12px;
+		margin: 0 6px !important;
+		transition: 300ms;
+	}
+
+	&.pagination-white {
+		.swiper-pagination-bullet {
+			background-color: #fff;
+		}
+		.swiper-pagination-bullet-active {
+			background-color: $secondary;
+			box-shadow: 0 0 0 3px $secondary;
+		}
+	}
+	&.pagination-blue {
+		.swiper-pagination-bullet {
+			background-color: $primary;
+		}
+		.swiper-pagination-bullet-active {
+			background-color: $secondary;
+			box-shadow: 0 0 0 3px $secondary;
+		}
+	}
+}
+
+
+
+
+
+// карточка
+// карточка курса
+.theme-card {
+	position: relative;
+	border-radius: 8px;
+	box-shadow: 0 0 25px 1px rgba(0,0,0,.12);
+	padding: 20px;
+	background-color: #fff;
+	overflow: hidden;
+	&.team-person {
+		padding: 35px 15px 35px 160px;
+		.card-image {
+			margin: 0;
+			width: 180px;
+			height:180px;
+			background-position: top left;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+
+}
+.card-image {
+	margin: -20px -20px 20px -20px;
+	height: 278px;
+	@include bg-cover;
+}
+.card-price {
+	padding: 15px 0 0 0;
+	margin: 0 0 20px 0;
+	border-top: 1px dashed #C5E8FF;
+	@include flex-row(nowrap, space-between, center);
+	i {
+		font-style: normal;
+	}
+}
+
+
+// отзывы
+
+.feedback-list {}
+.feedback-item {
+	&.photo-left {
+		.feedback-person {
+			margin: 0 200px 0 0;
+		}
+		.feedback-item-line {
+			position: absolute;
+			top: -160px;
+			left: 22%;
+			width: 55%;
+			height: 220px;
+		}
+		.feedback-text {
+			&::before {
+				background-image: url(/img/bg/bg-feedback-text-1.png);
+			}
+		}
+	}
+	&.photo-right {
+		.feedback-person {
+			margin: 0 0 0 200px;
+		}
+		.feedback-item-line {
+			position: absolute;
+			bottom: -160px;
+			right: 22%;
+			width: 55%;
+			height: 220px;
+		}
+		.feedback-text {
+			&::before {
+				background-image: url(/img/bg/bg-feedback-text-2.png);
+			}
+		}
+	}
+	position: relative;
+	@include flex-row(nowrap,space-between, center);
+	z-index: 1;
+}
+.feedback-person {
+	flex: 0 0 25%;
+	z-index: 1;
+	position: relative;
+	img {
+		z-index: 2;
+	}
+	.feedback-person-deco {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 120%;
+		height: 120%;
+		z-index: -1;
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+.feedback-text {
+	position: relative;
+	z-index: 1;
+	&::before {
+		position: absolute;
+		content: '';
+		width: 240%;
+		height: 240%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		background-image: url(/img/bg/bg-feedback-text-1.png);
+		@include bg-contain;
+		z-index: -1;
+	}
+}
 
 
 

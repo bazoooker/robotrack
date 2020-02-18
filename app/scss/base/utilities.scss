@@ -1,4 +1,4 @@
-/*utilities*/
+	/*utilities*/
 
 
 /*text utilities*/
@@ -6,15 +6,9 @@
 .text-left 			{}
 .text-center 		{text-align: center;}
 .text-right 		{}
-.text-small 		{}
-.text-extrasmall 	{}
-.text-big 			{
-	@include font-size(16px);
-	font-weight: 500;
-}
-.text-extrabig 		{}
 .text-uppercase 	{}
 .text-lowercase 	{}
+.text-bold 			{font-weight: 500;}
 
 .font-primary {
 	font-family: $font-primary;
@@ -23,10 +17,64 @@
 	font-family: $font-secondary;
 }
 
+.font-size-16 {
+	@include font-size(16px);
+}
+.font-size-20 {
+	@include font-size(20px);
+}
+.font-size-26 {
+	@include font-size(26px);
+}
+
 /*color utilities*/
 
 
 /*flow utilities*/
 .wrapper {
 	padding-top: 102px;	
+	main {
+		overflow: hidden;
+		height: auto;
+		min-height: 100vh;
+	}
+}
+
+.bg-wave {
+	position: relative;
+	margin-bottom: 240px;
+	.bg-wave-deco-holder {
+		position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    width: 125%;
+	    height: 100vh;
+	    transform: translate(-50%, -65%);
+	    z-index: -1;
+		svg {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.img-resp {
+	width: 100%;
+	height: auto;
+}
+
+.border-radius {
+	border-radius: 8px;
+}
+
+.fz-0 {
+	font-size: 0;
+}
+
+.img-circle {
+	border-radius: 50%;
 }
