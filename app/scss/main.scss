@@ -25,6 +25,8 @@
 @import "components/form";
 @import "components/photo";
 
+@import "components/page-colors";
+
 
 // ==============================
 // ОГЛАВЛЕНИЕ ДЛЯ ПОИСКА
@@ -461,6 +463,14 @@
 	.footer-deco {
 		
 	}
+}
+
+
+.deco-gear {
+	position: absolute;
+	border-radius: 50%;
+	z-index: -1;
+	@include bg-contain;
 }
 
 
