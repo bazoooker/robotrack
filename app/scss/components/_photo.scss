@@ -32,7 +32,7 @@
 	@include bg-cover;
 	cursor: pointer;
 	transform: translateX(-50%) translateY(-50%);
-	transition: 450ms;
+	transition: 300ms;
 	&::after {
 		position: absolute;
 	    content: '';

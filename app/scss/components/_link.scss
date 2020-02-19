@@ -41,3 +41,27 @@
 		}
 	}
 }
+.link-white {
+	color: #fff !important;
+	text-decoration: none;
+	span {
+		display: inline-block;
+		border-bottom: 1px dashed transparent;
+	}
+	svg,span {transition: 300ms;}
+	&:hover {
+		text-decoration: none;
+		span {
+			border-bottom: 1px dashed white !important;
+			text-decoration: none;
+		}
+		svg {
+			transform: translateX(4px);
+		}
+		opacity: .9;
+		path {
+			fill: $secondary;
+			stroke: $secondary;
+		}
+	}
+}

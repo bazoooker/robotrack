@@ -20,6 +20,9 @@
 .font-size-16 {
 	@include font-size(16px);
 }
+.font-size-18 {
+	@include font-size(18px);
+}
 .font-size-20 {
 	@include font-size(20px);
 }
@@ -32,7 +35,8 @@
 
 /*flow utilities*/
 .wrapper {
-	padding-top: 102px;	
+	z-index: 1;
+	// padding-top: 102px;	
 	main {
 		overflow: hidden;
 		height: auto;
@@ -40,25 +44,45 @@
 	}
 }
 
-.bg-wave {
+.bg-wave-ltr {
 	position: relative;
 	margin-bottom: 240px;
-	.bg-wave-deco-holder {
+	z-index: 1;
+	&::before {
 		position: absolute;
+		content: '';
+		width: 2304px;
+		height: 1200px;
 	    left: 50%;
-	    top: 50%;
-	    width: 125%;
-	    height: 100vh;
-	    transform: translate(-50%, -65%);
+	    bottom: -90px;
+	    transform: translateX(-50%);
+	    // transform: translate(-50%, -65%);
+	    background-image: url(/img/bg-page-deco/bg-wave-ltr.svg);
+	    background-size: contain;
+	    background-position: 100% 100%;
+	    background-repeat: no-repeat;
 	    z-index: -1;
-		svg {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			width: 100%;
-			height: auto;
-		}
+	    pointer-events: none;
+	}
+}
+.bg-wave-rtl {
+	position: relative;
+	margin-bottom: 240px;
+	z-index: 1;
+	&::before {
+		position: absolute;
+		content: '';
+		width: 2304px;
+		height: 1200px;
+	    left: 50%;
+	    bottom: -50%;
+	    transform: translateX(-50%);
+	    background-image: url(/img/bg-page-deco/bg-wave-rtl.svg);
+	    background-size: contain;
+	    background-position: 100% 100%;
+	    background-repeat: no-repeat;
+	    z-index: -1;
+	    pointer-events: none;
 	}
 }
 
