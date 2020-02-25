@@ -71,16 +71,28 @@
 	}
 }
 
-// @keyframes anim-btn {
-// 	0% {
-// 		transform: none;
-// 	}
-// 	50% {
-// 		transform: translateY(2px);
-// 	}
-// 	100% {
-// 		transform: none;
-// 	}
-// }
 
+
+.hamburger {
+	margin: 0 -15px 0 0;
+	border: 0 !important;
+	outline: 0 !important;
+	.hamburger-inner,
+	.hamburger-inner::before,
+	.hamburger-inner::after { background-color: $secondary}
+	&.is-active {
+		.hamburger-inner,
+		.hamburger-inner::before,
+		.hamburger-inner::after { background-color: $primary}
+	}
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+	height: 3px;
+}
+// 568
+@include media-breakpoint-down(xs) {
+	.hamburger {
+		margin: 0 -15px 0 auto;
+	}
+}
 

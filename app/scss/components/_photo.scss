@@ -60,3 +60,39 @@
 	}
 }
 
+
+
+
+
+
+// брейкпоинты
+// 1200
+@include media-breakpoint-down(lg) {
+
+}
+
+// 992
+@include media-breakpoint-down(md) {
+	.photo.height-550 {
+		height: 260px;
+	}
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+
+}
+
+// 568
+@include media-breakpoint-down(xs) {
+
+
+}
+
+// 414
+@include media-breakpoint-down(xxs) {
+	.photo.height-550,
+	.photo.height-245 {
+		height: 200px;
+	}
+}

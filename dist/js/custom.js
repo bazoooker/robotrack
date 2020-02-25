@@ -8,19 +8,12 @@ $(document).ready(function() {
     // 2. менять js-ом координаты градиентов
 
 
-
-
-
-    $('.js-change-page-color').click(function() {
-        
-        // $('#first').addClass('green');
-        // setTimeout(function() {
-        //     $('#paint0_linear').attr('x1', '577.5');
-        //     $('#paint0_linear').attr('y1', '-124');
-        //     $('#paint0_linear').attr('x2', '-176.967');
-        //     $('#paint0_linear').attr('y2', '-110.441');
-        // }, 1000);
+    // гамбургер-меню анимация кнопки
+    $('.js-toggle-hamburger').click(function() {
+        $(this).toggleClass('is-active');
     });
+
+
 
 
 
@@ -49,7 +42,30 @@ $(document).ready(function() {
             el: '.swiper-pagination',
             clickable: true,
         },
+        breakpoints: {
+            1200: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 1,
+            },
+        }
     });
+
+    var swiperCourses = new Swiper('.js-courses-mobile-slider', {
+        slidesPerView: 2,
+        spaceBetween: 0,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+        768: {
+          slidesPerView: 1,
+        },
+      }
+    });
+
 
 
     $('select').niceSelect();

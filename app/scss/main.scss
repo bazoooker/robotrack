@@ -1,4 +1,5 @@
 @import "../../node_modules/rfs/sass"; //адаптивные шрифты
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers"; //hamburger animations
 @import "base/var"; // переменные для переопределения бутстраповских
 @import "../../node_modules/bootstrap/scss/bootstrap"; // css бутстрапа
 
@@ -178,6 +179,18 @@
 	padding: 20px;
 	background-color: #fff;
 	overflow: hidden;
+	&.price-card {
+		min-height: 620px;
+		@include flex-col(nowrap,flex-start,center);
+		.card-image {
+			width: 120%;
+		}
+		p, .card-price {
+			width: 100%;
+		}
+		.card-price {margin-top: auto;}
+
+	}
 	&.team-person {
 		padding: 35px 15px 35px 160px;
 		.card-image {
@@ -188,21 +201,22 @@
 			background-size: contain;
 			background-repeat: no-repeat;
 			position: absolute;
-			left: 0;
-			top: 0;
+			left: -40px;
+    		top: -35px;
 		}
 	}
 }
 .card-image {
 	margin: -20px -20px 20px -20px;
 	height: 278px;
+	flex: 0 0 278px;
 	@include bg-cover;
 }
 .card-price {
 	padding: 15px 0 0 0;
 	margin: 0 0 20px 0;
 	border-top: 1px dashed #C5E8FF;
-	@include flex-row(nowrap, space-between, center);
+	@include flex-row(nowrap, space-between, flex-end);
 	i {
 		font-style: normal;
 	}
@@ -491,12 +505,165 @@
 
 
 // брейкпоинты
-@include media-breakpoint-down(lg) {}
+// 1200
+@include media-breakpoint-down(lg) {
+	.header {
+		.logo {
+		    flex: 0 0 170px;
+		    width: 170px;
+		    height: 36px;
+		    &::before {
+		    	width: 700px;
+    			height: 464px;
+		    }
+		}
+		.header-nav {
+			margin: 0 30px 0 auto;
+		}
+		.header-nav-link {
+			padding: 5px 8px;
+		}
+	}
+	.hero {
+		margin-top: 70px;
+	}
+	.theme-card {
+		box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.12) !important;
+	}
 
-@include media-breakpoint-down(md) {}
+	.feedback-text {
+		&::before {
+			width: 170%;
+			height: 170%;
+		}
+	}
+}
 
-@include media-breakpoint-down(sm) {}
+// 992
+@include media-breakpoint-down(md) {
+	.header {
+		.header-nav {
+			display: none;
+		}
+		.header-tel {
+			margin: 0 40px 0 auto;
+		}
+	}
 
-@include media-breakpoint-down(xs) {}
+	.hero {
+		margin-bottom: 200px;
+		&::before {
+			opacity: .1;
+		}
+	}
 
-@include media-breakpoint-down(xxs) {}
+	.theme-card.price-card {
+		min-height: 550px;
+		.card-image {
+			height: 200px;
+			flex: 0 0 200px;
+		}
+	}
+
+
+	
+	.feedback-item {
+		.feedback-person {
+			margin: 0 60px 0 0 !important;
+		}
+	}
+	.feedback-text {
+		&::before {
+			display: none;
+		}
+	}
+	.feedback-item-line {display: none;}
+
+	.news-thumb.news-thumb-big {
+		display: block;
+		margin-bottom: 30px;
+	}
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+	.theme-card.price-card {
+		height: 530px;
+		// flex: 0 0 530px;
+	}
+	.feedback-item.photo-right {
+		.feedback-text {
+			margin: 0 40px 0 0;
+		}
+	}
+}
+
+// 568
+@include media-breakpoint-down(xs) {
+	.header {
+		height: 65px;
+		.logo {
+		    flex: 0 0 150px;
+		    width: 150px;
+		    height: 32px;
+		    &::before {
+		    	width: 580px;
+			    height: 297px;
+			    right: -63px;
+			    top: -26px;
+		    }
+		}
+		.btn-burger {
+			margin-left: auto;
+		}
+		.header-tel {
+			display: none;
+		}
+	}
+	.hero {
+		margin-top: 40px;
+	}
+
+	.theme-card.price-card {
+		height: 450px;
+	}
+
+
+	.feedback-item {
+		@include flex-row(wrap,flex-start,flex-start);
+		padding: 20px;
+		background-color: #fff0f0;
+		text-align: center;
+		border-radius: 8px;
+		.feedback-person {
+			flex: 0 0 80px;
+			margin: 10px auto 30px auto !important;
+		}
+		.feedback-text {
+			flex: 1 1 100%;
+			margin: 0 !important;
+		}
+
+		&.photo-right {
+			.feedback-person {
+				order: -1;
+			}
+		}
+		&.mb-5 {
+			margin-bottom: 20px !important;
+		}
+	}
+
+}
+
+// 414
+@include media-breakpoint-down(xxs) {
+	.theme-card.team-person {
+		padding: 165px 30px 30px 30px;
+		.card-image {
+			top: -35px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
