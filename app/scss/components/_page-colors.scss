@@ -33,7 +33,47 @@
 	}
 
 	.section-form {
-		.section-form-gear {}
-		.section-form-gear {}
+		.section-form-gear {
+			&:nth-of-type(1){
+			    bottom: -249px;
+			    right: 12%;
+			    width: 82px;
+			    height: 82px;
+				background-image: url(/img/bg/bg-gear-big-2-blue.svg);
+			}
+			&:nth-of-type(2){
+				bottom: -225px;
+			    right: 5%;
+			    width: 140px;
+			    height: 140px;
+				background-image: url(/img/bg/bg-gear-big-2-blue.svg);
+			}
+		}
+	}
+
+	.footer {
+		&::before {
+			background-image: url(/img/bg/footer-bg.svg);
+		}
+
+		.container {
+			position: relative;
+			.footer-image-gear {
+				&.one {
+					top: -210px;
+				    right: 13%;
+				    width: 84px;
+				    height: 84px;
+					background-image: url(/img/icons/i-gear-hero-3.svg);
+				}
+				&.two {
+					top: -240px;
+				    right: 0%;
+				    width: 160px;
+				    height: 160px;
+					background-image: url(/img/icons/i-gear-hero-2.svg);
+				}
+			}
+		}
 	}
 }

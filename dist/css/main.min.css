@@ -12487,6 +12487,38 @@ button.swiper-pagination-bullet {
   height: 148px;
   background-image: url(/img/icons/i-gear-hero-2.svg); }
 
+.page-blue .section-form .section-form-gear:nth-of-type(1) {
+  bottom: -249px;
+  right: 12%;
+  width: 82px;
+  height: 82px;
+  background-image: url(/img/bg/bg-gear-big-2-blue.svg); }
+
+.page-blue .section-form .section-form-gear:nth-of-type(2) {
+  bottom: -225px;
+  right: 5%;
+  width: 140px;
+  height: 140px;
+  background-image: url(/img/bg/bg-gear-big-2-blue.svg); }
+
+.page-blue .footer::before {
+  background-image: url(/img/bg/footer-bg.svg); }
+
+.page-blue .footer .container {
+  position: relative; }
+  .page-blue .footer .container .footer-image-gear.one {
+    top: -210px;
+    right: 13%;
+    width: 84px;
+    height: 84px;
+    background-image: url(/img/icons/i-gear-hero-3.svg); }
+  .page-blue .footer .container .footer-image-gear.two {
+    top: -240px;
+    right: 0%;
+    width: 160px;
+    height: 160px;
+    background-image: url(/img/icons/i-gear-hero-2.svg); }
+
 .section-courses {
   margin: 0 0 220px 0;
   z-index: 1; }
@@ -12731,6 +12763,18 @@ button.swiper-pagination-bullet {
 .footer {
   position: relative;
   z-index: 1; }
+  .footer::before {
+    position: absolute;
+    content: '';
+    bottom: -3%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 736px;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background-size: cover;
+    background-position: bottom center; }
   .footer .socials {
     display: flex;
     flex-flow: row nowrap;
@@ -12757,22 +12801,6 @@ button.swiper-pagination-bullet {
         margin-right: 0; }
       .footer .socials-icons .socials-icon:hover svg path {
         fill: #FF4249; }
-  .footer .footer-deco {
-    position: absolute;
-    bottom: -3%;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 736px;
-    width: 170%;
-    z-index: -1;
-    pointer-events: none; }
-    .footer .footer-deco svg {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 50%;
-      bottom: 0;
-      transform: translateX(-50%); }
 
 .footer-topbar {
   display: flex;
