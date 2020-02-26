@@ -1,12 +1,18 @@
 
+$(window).scroll(function() {
+    var theta = $(window).scrollTop() / 10 % Math.PI;
+    var thetaSlow = $(window).scrollTop() / 100 % Math.PI;
+    $('.rotate-me-fast').css({ transform: 'rotate(' + theta + 'rad)' });
+    $('.rotate-me-slow').css({ transform: 'rotate(' + thetaSlow + 'rad)' });
+});
 
 
 $(document).ready(function() {
 
 
-    // 1. накидывать классы для изменения цветов
-    // 2. менять js-ом координаты градиентов
-
+    $('.js-rotate-gears-on-hover').hover(function() {
+        $('.rocket-body, .rocket-fire').toggleClass('active');
+    });
 
     // гамбургер-меню анимация кнопки
     $('.js-toggle-hamburger').click(function() {

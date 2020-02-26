@@ -101,18 +101,17 @@
 			transition: 300ms;
 			opacity: 0;
 		}
-		// раскоментить
-		// &:hover {
-		// 	&.accented::after {
-		// 		bottom: -7px;
-		// 	}
-		// 	&::before {
-		// 		transform: translate(-50%, -50%) scale(1);
-		// 		opacity: 1;
-		// 	}
-		// 	color: #fff;
+		&:hover {
+			&.accented::after {
+				bottom: -7px;
+			}
+			&::before {
+				transform: translate(-50%, -50%) scale(1);
+				opacity: 1;
+			}
+			color: #fff;
 
-		// }
+		}
 	}
 	.header-tel {
 		@include flex-row(nowrap,flex-start,center);

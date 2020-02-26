@@ -102,3 +102,11 @@
 .img-circle {
 	border-radius: 50%;
 }
+
+@media screen and (max-width: 1200px) {
+	.bg-wave-rtl {
+		&::before {
+			background-image: url(/img/bg/bg-features-mobile.svg);
+		}
+	}
+}
