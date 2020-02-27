@@ -56,7 +56,6 @@
 	    left: 50%;
 	    bottom: -90px;
 	    transform: translateX(-50%);
-	    // transform: translate(-50%, -65%);
 	    background-image: url(/img/bg-page-deco/bg-wave-ltr.svg);
 	    background-size: contain;
 	    background-position: 100% 100%;
@@ -104,9 +103,59 @@
 }
 
 @media screen and (max-width: 1200px) {
+	.bg-wave-ltr {
+		&::before {
+		    bottom: -135px;
+		}
+	}
 	.bg-wave-rtl {
 		&::before {
 			background-image: url(/img/bg/bg-features-mobile.svg);
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.bg-wave-ltr {
+		margin-bottom: 140px;
+		&::before {
+			width: 1704px;
+		    height: 800px;
+		    left: 40%;
+		    bottom: -111px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	.bg-wave-ltr {
+		margin-bottom: 140px;
+		.container {
+			width: 100%;
+			max-width: 100%;
+		}
+		&::before {
+			width: 2304px;
+		    height: 1000px;
+		    left: 50%;
+		    top: 23%;
+		    bottom: auto;
+		    transform: translate(-50%, -50%);
+		}
+	}
+}
+
+
+@media screen and (max-width: 568px) {
+	.bg-wave-ltr {
+		&::before {
+		    width: 2504px;
+		    height: 1400px;
+		    left: 50%;
+		    top: 17%;
+		    bottom: auto;
+		    transform: translate(-50%, -50%);
 		}
 	}
 }

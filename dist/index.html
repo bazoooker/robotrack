@@ -110,7 +110,7 @@
                             <p class="font-size-16">Детский клуб Нейротрек – это мир робототехники, программирования и 3D моделирования для детей и подростков.</p>
                             <p class="mb-3">Цель клуба – выявление технических способностей и развитие их у детей. Наши занятия практико-ориентированы и нацелены на формирование компетенций профессий будущего.</p>
                             <p class="mb-3">
-                                <a href="#" class="btn btn-secondary btn-size-l text-uppercase js-rotate-gears-on-hover">
+                                <a href="#" class="btn btn-secondary btn-size-l text-uppercase js-rotate-gears-on-hover js-opener" data-target-id="modalka-form">
                                     <span class="btn-hover"></span>
                                     <span class="btn-text">
                                         Записаться на пробное занятие
@@ -211,109 +211,101 @@
             <section class="bg-wave-ltr">
                 <div class="container">
                     <div class="features">
-                        <div class="features-list">
-                            <div class="features items-6">
-                                <div class="features-item">
-                                    <div class="features-item-number">
-                                        01
-                                    </div>
-                                    <div class="features-item-content">
-                                        <span class="features-item-icon">
-                                            <img src="/img/icons/i-feature-1.png" alt="" class="img-fluid">
-                                        </span>
-                                        <span class="features-item-name">Творчество</span>
-                                    </div>
-                                    <div class="features-item-deco">
-                                        <svg id="bla-bla" width="180" height="181" viewBox="0 0 180 181" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path id="circle" d="M0,90.0735a90,90 0 1,0 180,0a90,90 0 1,0 -180,0" fill="white" fill-opacity="0.5">
-                                                <path id="shape" d="M40.5158 146.597C29.9752 104.886 52.0553 81.2144 84.1049 66.6846C120.431 50.2163 153.336 49.1635 171.711 49.1634C199.489 49.1633 231.967 75.4945 231.967 122.239C231.967 159.846 230.905 212.72 191.5 226C153.943 238.657 115.5 243 90 226C59.9943 205.996 46.8875 171.811 40.5158 146.597Z" fill="white" fill-opacity="0.9">
-                                        </svg>
-                                    </div>
+                        <div class="features-list items-6">
+                            <div class="features-item js-features-tab js-feature-hover" data-target="features-tab-1">
+                                <div class="features-item-number">
+                                    01
                                 </div>
-                                <div class="features-item">
-                                    <div class="features-item-number">
-                                        02
-                                    </div>
-                                    <div class="features-item-content">
-                                        <span class="features-item-icon">
-                                            <img src="/img/icons/i-feature-2.png" alt="" class="img-fluid">
-                                        </span>
-                                        <span class="features-item-name">Игра</span>
-                                    </div>
-                                    <div class="features-item-deco">
-                                        <svg id="bla-bla" width="180" height="181" viewBox="0 0 180 181" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path id="circle" d="M0,90.0735a90,90 0 1,0 180,0a90,90 0 1,0 -180,0" fill="white" fill-opacity="0.5">
-                                                <path id="shape" d="M40.5158 146.597C29.9752 104.886 52.0553 81.2144 84.1049 66.6846C120.431 50.2163 153.336 49.1635 171.711 49.1634C199.489 49.1633 231.967 75.4945 231.967 122.239C231.967 159.846 230.905 212.72 191.5 226C153.943 238.657 115.5 243 90 226C59.9943 205.996 46.8875 171.811 40.5158 146.597Z" fill="white" fill-opacity="0.9">
-                                        </svg>
-                                    </div>
+                                <div class="features-item-content">
+                                    <span class="features-item-icon" style="background-image: url(/img/icons/i-feature-1.png);">
+                                    </span>
+                                    <span class="features-item-name">Творчество</span>
                                 </div>
-                                <div class="features-item">
-                                    <div class="features-item-number">
-                                        03
-                                    </div>
-                                    <div class="features-item-content">
-                                        <span class="features-item-icon">
-                                            <img src="/img/icons/i-feature-3.png" alt="" class="img-fluid">
-                                        </span>
-                                        <span class="features-item-name">Общение</span>
-                                    </div>
-                                    <div class="features-item-deco">
-                                        <svg id="bla-bla" width="180" height="181" viewBox="0 0 180 181" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path id="circle" d="M0,90.0735a90,90 0 1,0 180,0a90,90 0 1,0 -180,0" fill="white" fill-opacity="0.5">
-                                                <path id="shape" d="M40.5158 146.597C29.9752 104.886 52.0553 81.2144 84.1049 66.6846C120.431 50.2163 153.336 49.1635 171.711 49.1634C199.489 49.1633 231.967 75.4945 231.967 122.239C231.967 159.846 230.905 212.72 191.5 226C153.943 238.657 115.5 243 90 226C59.9943 205.996 46.8875 171.811 40.5158 146.597Z" fill="white" fill-opacity="0.9">
-                                        </svg>
-                                    </div>
+                                <div class="features-item-deco">
+                                    <svg width="180" height="182" viewBox="0 0 180 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                        <path class="shape" opacity="0.5" d="M180 91.0735C180 140.779 139.706 181.5 90 181.5C40.2944 181.5 0 140.779 0 91.0735C0 41.3679 40.2944 0 90 0C139.706 0 180 41.3679 180 91.0735Z" fill="white" />
+                                    </svg>
                                 </div>
-                                <div class="features-item">
-                                    <div class="features-item-number">
-                                        04
-                                    </div>
-                                    <div class="features-item-content">
-                                        <span class="features-item-icon">
-                                            <img src="/img/icons/i-feature-4.png" alt="" class="img-fluid">
-                                        </span>
-                                        <span class="features-item-name">Познание<br />нового</span>
-                                    </div>
-                                    <div class="features-item-deco">
-                                        <svg id="bla-bla" width="180" height="181" viewBox="0 0 180 181" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path id="circle" d="M0,90.0735a90,90 0 1,0 180,0a90,90 0 1,0 -180,0" fill="white" fill-opacity="0.5">
-                                                <path id="shape" d="M40.5158 146.597C29.9752 104.886 52.0553 81.2144 84.1049 66.6846C120.431 50.2163 153.336 49.1635 171.711 49.1634C199.489 49.1633 231.967 75.4945 231.967 122.239C231.967 159.846 230.905 212.72 191.5 226C153.943 238.657 115.5 243 90 226C59.9943 205.996 46.8875 171.811 40.5158 146.597Z" fill="white" fill-opacity="0.9">
-                                        </svg>
-                                    </div>
+                            </div>
+                            <div class="features-item js-features-tab js-feature-hover" data-target="features-tab-2">
+                                <div class="features-item-number">
+                                    02
                                 </div>
-                                <div class="features-item">
-                                    <div class="features-item-number">
-                                        05
-                                    </div>
-                                    <div class="features-item-content">
-                                        <span class="features-item-icon">
-                                            <img src="/img/icons/i-feature-6.png" alt="" class="img-fluid">
-                                        </span>
-                                        <span class="features-item-name">Соревнования</span>
-                                    </div>
-                                    <div class="features-item-deco">
-                                        <svg id="bla-bla" width="180" height="181" viewBox="0 0 180 181" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path id="circle" d="M0,90.0735a90,90 0 1,0 180,0a90,90 0 1,0 -180,0" fill="white" fill-opacity="0.5">
-                                                <path id="shape" d="M40.5158 146.597C29.9752 104.886 52.0553 81.2144 84.1049 66.6846C120.431 50.2163 153.336 49.1635 171.711 49.1634C199.489 49.1633 231.967 75.4945 231.967 122.239C231.967 159.846 230.905 212.72 191.5 226C153.943 238.657 115.5 243 90 226C59.9943 205.996 46.8875 171.811 40.5158 146.597Z" fill="white" fill-opacity="0.9">
-                                        </svg>
-                                    </div>
+                                <div class="features-item-content">
+                                    <span class="features-item-icon" style="background-image: url(/img/icons/i-feature-2.png);">
+                                    </span>
+                                    <span class="features-item-name">Игра</span>
                                 </div>
-                                <div class="features-item">
-                                    <div class="features-item-number">
-                                        06
-                                    </div>
-                                    <div class="features-item-content">
-                                        <span class="features-item-icon">
-                                            <img src="/img/icons/i-feature-5.png" alt="" class="img-fluid">
-                                        </span>
-                                        <span class="features-item-name">Практика</span>
-                                    </div>
-                                    <div class="features-item-deco">
-                                        <svg id="bla-bla" width="180" height="181" viewBox="0 0 180 181" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path id="circle" d="M0,90.0735a90,90 0 1,0 180,0a90,90 0 1,0 -180,0" fill="white" fill-opacity="0.5">
-                                                <path id="shape" d="M40.5158 146.597C29.9752 104.886 52.0553 81.2144 84.1049 66.6846C120.431 50.2163 153.336 49.1635 171.711 49.1634C199.489 49.1633 231.967 75.4945 231.967 122.239C231.967 159.846 230.905 212.72 191.5 226C153.943 238.657 115.5 243 90 226C59.9943 205.996 46.8875 171.811 40.5158 146.597Z" fill="white" fill-opacity="0.9">
-                                        </svg>
-                                    </div>
+                                <div class="features-item-deco">
+                                    <svg width="180" height="182" viewBox="0 0 180 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                        <path class="shape" opacity="0.5" d="M180 91.0735C180 140.779 139.706 181.5 90 181.5C40.2944 181.5 0 140.779 0 91.0735C0 41.3679 40.2944 0 90 0C139.706 0 180 41.3679 180 91.0735Z" fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="features-item js-features-tab js-feature-hover" data-target="features-tab-3">
+                                <div class="features-item-number">
+                                    03
+                                </div>
+                                <div class="features-item-content">
+                                    <span class="features-item-icon" style="background-image: url(/img/icons/i-feature-3.png);">
+                                    </span>
+                                    <span class="features-item-name">Общение</span>
+                                </div>
+                                <div class="features-item-deco">
+                                    <svg width="180" height="182" viewBox="0 0 180 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                        <path class="shape" opacity="0.5" d="M180 91.0735C180 140.779 139.706 181.5 90 181.5C40.2944 181.5 0 140.779 0 91.0735C0 41.3679 40.2944 0 90 0C139.706 0 180 41.3679 180 91.0735Z" fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="features-item js-features-tab js-feature-hover" data-target="features-tab-4">
+                                <div class="features-item-number">
+                                    04
+                                </div>
+                                <div class="features-item-content">
+                                    <span class="features-item-icon" style="background-image: url(/img/icons/i-feature-4.png);">
+                                    </span>
+                                    <span class="features-item-name">Познание<br /> нового</span>
+                                </div>
+                                <div class="features-item-deco">
+                                    <svg width="180" height="182" viewBox="0 0 180 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                        <path class="shape" opacity="0.5" d="M180 91.0735C180 140.779 139.706 181.5 90 181.5C40.2944 181.5 0 140.779 0 91.0735C0 41.3679 40.2944 0 90 0C139.706 0 180 41.3679 180 91.0735Z" fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="features-item js-features-tab js-feature-hover" data-target="features-tab-5">
+                                <div class="features-item-number">
+                                    06
+                                </div>
+                                <div class="features-item-content">
+                                    <span class="features-item-icon" style="background-image: url(/img/icons/i-feature-6.png);">
+                                    </span>
+                                    <span class="features-item-name">Соревнования</span>
+                                </div>
+                                <div class="features-item-deco">
+                                    <svg width="180" height="182" viewBox="0 0 180 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                        <path class="shape" opacity="0.5" d="M180 91.0735C180 140.779 139.706 181.5 90 181.5C40.2944 181.5 0 140.779 0 91.0735C0 41.3679 40.2944 0 90 0C139.706 0 180 41.3679 180 91.0735Z" fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="features-item js-features-tab js-feature-hover" data-target="features-tab-6">
+                                <div class="features-item-number">
+                                    05
+                                </div>
+                                <div class="features-item-content">
+                                    <span class="features-item-icon" style="background-image: url(/img/icons/i-feature-5.png);">
+                                    </span>
+                                    <span class="features-item-name">Практика</span>
+                                </div>
+                                <div class="features-item-deco">
+                                    <svg width="180" height="182" viewBox="0 0 180 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                                        <path class="shape" opacity="0.5" d="M180 91.0735C180 140.779 139.706 181.5 90 181.5C40.2944 181.5 0 140.779 0 91.0735C0 41.3679 40.2944 0 90 0C139.706 0 180 41.3679 180 91.0735Z" fill="white" />
+                                    </svg>
                                 </div>
                             </div>
                         </div>
@@ -321,10 +313,43 @@
                             <h2 class="text-white">
                                 Занятия на которые хочется ходить
                             </h2>
-                            <p class="text-white"><b>Обучение</b></p>
-                            <p class="text-white">
-                                Занятия ведут выпускники ведущих ВУЗов Алтайского края. Наши клубы являются лучшим местом для изучения робототехники различного уровня по системе «от простого к сложному».
-                            </p>
+                            <div class="features-tab" id="features-tab-1">
+                                <p class="text-white"><b>Творчество</b></p>
+                                <p class="text-white">
+                                    Занятия ведут выпускники ведущих ВУЗов Алтайского края. Наши клубы являются лучшим местом для изучения робототехники различного уровня по системе «от простого к сложному».
+                                </p>
+                            </div>
+                            <div class="features-tab" id="features-tab-2" style="display: none;">
+                                <p class="text-white"><b>Игра</b></p>
+                                <p class="text-white">
+                                    1111Занятия ведут выпускники ведущих ВУЗов Алтайского края. Наши клубы являются лучшим местом для изучения робототехники различного уровня по системе «от простого к сложному».
+                                </p>
+                            </div>
+                            <div class="features-tab" id="features-tab-3" style="display: none;">
+                                <p class="text-white"><b>Общение</b></p>
+                                <p class="text-white">
+                                    2222Занятия ведут выпускники ведущих ВУЗов Алтайского края. Наши клубы являются лучшим местом для изучения робототехники различного уровня по системе «от простого к сложному».
+                                </p>
+                            </div>
+                            <div class="features-tab" id="features-tab-4" style="display: none;">
+                                <p class="text-white"><b>Познание нового</b></p>
+                                <p class="text-white">
+                                    3333Занятия ведут выпускники ведущих ВУЗов Алтайского края. Наши клубы являются лучшим местом для изучения робототехники различного уровня по системе «от простого к сложному».
+                                </p>
+                            </div>
+                            <div class="features-tab" id="features-tab-5" style="display: none;">
+                                <p class="text-white"><b>Соревнования</b></p>
+                                <p class="text-white">
+                                    4444Занятия ведут выпускники ведущих ВУЗов Алтайского края. Наши клубы являются лучшим местом для изучения робототехники различного уровня по системе «от простого к сложному».
+                                </p>
+                            </div>
+                            <div class="features-tab" id="features-tab-6" style="display: none;">
+                                <p class="text-white"><b>Практика</b></p>
+                                <p class="text-white">
+                                    5555Занятия ведут выпускники ведущих ВУЗов Алтайского края. Наши клубы являются лучшим местом для изучения робототехники различного уровня по системе «от простого к сложному».
+                                </p>
+                            </div>
+
                         </div>
                     </div> <!-- features -->
                 </div> <!-- container -->
@@ -737,7 +762,7 @@
                     </div>
                 </div>
                 <span class="deco-gear section-form-gear rotate-me-slow"></span>
-                <span class="deco-gear section-form-gear rotate-me-fast"></span>
+                <span class="deco-gear section-form-gear rotate-me-fast d-none d-lg-block"></span>
             </section>
 
 
@@ -1270,7 +1295,7 @@
                     </div>
 
                     <!-- шестерни -->
-                    <div class="deco-gear footer-image-gear one rotate-me-fast"></div>
+                    <div class="deco-gear footer-image-gear one rotate-me-fast d-none d-lg-block"></div>
                     <div class="deco-gear footer-image-gear two rotate-me-slow"></div>
 
                 </div> <!-- container -->
@@ -1314,6 +1339,51 @@
 
 
 
+            <aside class="modalka hidden" id="modalka-form">
+                <div class="modalka-content">
+                    <h4 class="text-white h4 mb-3 mt-0">
+                        Запишитесь на бесплатный пробный урок
+                    </h4>
+                    <form action="" class="theme-form mb-2">
+                        <div class="form-label mb-2">
+                            <input type="text" id="" name="" placeholder="Ваше имя">
+                        </div>
+                        <div class="form-label mb-2">
+                            <input class="js-mask-tel" type="tel" id="" name="" placeholder="Ваш телефон">
+                        </div>
+                    </form>
+                    <p class="policy-checkbox text-small text-white">С политикой конфиденциальности ознакомлен(а), даю согласие на обработку моих Персональных данных</p>
+                    <button class="btn btn-secondary btn-size-m">
+                        <span class="btn-hover"></span>
+                        <span class="btn-text">
+                            Отправить
+                        </span>
+                    </button>
+                    <span class="btn-close js-closer" data-target-id="modalka-form"></span>
+                    <div class="modalka-message" style="display: none;">
+                        Отправлено!
+                    </div>
+                </div>
+                <div class="modalka-bg"></div>
+            </aside>
+
+
+
+
+
+
+            <div class="to-top js-to-top">
+                <span class="to-top-icon">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.1008 2.38503C9.89647 2.17354 9.55637 2.17354 9.34487 2.38503C9.14052 2.58938 9.14052 2.92949 9.34487 3.13336L13.178 6.96649H0.529216C0.23436 6.96696 0 7.20132 0 7.49618C0 7.79103 0.23436 8.03302 0.529216 8.03302H13.178L9.34487 11.859C9.14052 12.0705 9.14052 12.4111 9.34487 12.6149C9.55637 12.8264 9.89695 12.8264 10.1008 12.6149L14.8414 7.87439C15.0529 7.67004 15.0529 7.32994 14.8414 7.12606L10.1008 2.38503Z" fill="#fff" />
+                    </svg>
+                </span>
+                <span class='to-top-text'>Наверх</span>
+            </div>
+
+
+
+
 
 
         </main>
@@ -1326,164 +1396,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--     <style>
-        .box {
-            height: 200px;
-            width: 100%;
-            background-color: red;
-            margin-bottom: 30px;
-        }
-
-        #paint0_linear:hover {
-            transition: 1s;
-        }
-
-        #first {}
-
-        #first.green stop:nth-child(1) {
-            stop-color: #26C248;
-        }
-
-        #first.green stop:nth-child(2) {
-            stop-color: #9BF7AF;
-        }
-    </style> -->
-
-    <!--     <svg id="first" width="732" height="469" viewBox="0 0 732 469" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M731.5 135.5C731.5 56 654.667 18.3333 608.5 0H0V397.291C92.0928 369.791 151.593 468.791 235.593 468.791C319.593 468.791 325 384 349 317.5C373 251 429 216 501.5 226.5C574 237 731.5 232.515 731.5 135.5Z" fill="url(#paint0_linear)" />
-        <defs>
-            <linearGradient id="paint0_linear" x1="768.998" y1="-123.999" x2="14.5313" y2="-110.44" gradientUnits="userSpaceOnUse">
-                <stop id="fff" stop-color="#02D1FD" />
-                <stop offset="1" stop-color="#0FF0E3" />
-            </linearGradient>
-        </defs>
-    </svg> -->
-
-    <!--     <button class="fixed-btn btn btn-primary js-change-page-color">
-        клик-клик!
-    </button> -->
-
-
-
-    <!--     <div class="container mb-5">
-        <div class="row">
-            <div class="col-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
-                <div class="box"></div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
-                <div class="box"></div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
-                <div class="box"></div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
-                <div class="box"></div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
-                <div class="box"></div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
-                <div class="box"></div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
-                <div class="box"></div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
-                <div class="box"></div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
-                <div class="box"></div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
-                <div class="box"></div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
-                <div class="box"></div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
-                <div class="box"></div>
-            </div>
-        </div>
-    </div> -->
-
-    <!--     <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="embed-responsive embed-responsive-1by1">
-                    <img class="embed-responsive-item" src="https://pixnio.com/free-images/2017/08/26/2017-08-26-09-10-09-1000x666.jpg"></img>
-                </div>
-            </div>
-
-            <div class="col-lg-3">
-                <div class="embed-responsive embed-responsive-21by9">
-                    <img class="embed-responsive-item" src="https://pixnio.com/free-images/2017/08/26/2017-08-26-09-10-09-1000x666.jpg"></img>
-                </div>
-
-            </div>
-
-            <div class="col-lg-3">
-
-                <div class="embed-responsive embed-responsive-16by9">
-                    <img class="embed-responsive-item" src="https://pixnio.com/free-images/2017/08/26/2017-08-26-09-10-09-1000x666.jpg"></img>
-                </div>
-
-            </div>
-
-            <div class="col-lg-3">
-
-                <div class="embed-responsive embed-responsive-4by3">
-                    <img class="embed-responsive-item" src="https://pixnio.com/free-images/2017/08/26/2017-08-26-09-10-09-1000x666.jpg"></img>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="container">
-        <a href="/" class="btn btn-primary">Жми!</a>
-
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown button
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-        </div>
-    </div> -->
 
 
 

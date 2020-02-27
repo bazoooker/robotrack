@@ -1,2 +1,102 @@
 /*custom styles*/
 
+
+// =========== modalkas
+.modalka {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	.btn-close {
+		position: absolute;
+	    top: 15px;
+	    right: 15px;
+	}
+	.form-label {
+		box-shadow: 0 0 0 1px #e2e2e2;
+	}
+	&.hidden {
+		pointer-events: none;
+		.modalka-bg {
+			opacity: 0;
+			width: 0%;
+			height: 0%;
+			pointer-events: none;
+			transition-delay: 300ms;
+		}
+		.modalka-content {
+			opacity: 0;
+			pointer-event: none;
+			transform: translate(-50%, -50%) scale(1.2);
+			transition-delay: 0ms;
+		}
+	}
+}
+.modalka-bg {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 150vw;
+	height: 150vw;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0,0,0,.85);
+	z-index: -1;
+	transition: 600ms;
+}
+.modalka-content {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	max-width: 500px;
+	min-height: 350px;
+	padding: 40px;
+	border-radius: 14px;
+	background: linear-gradient(295.84deg, #0FF0E3 -34.45%, #00D1FF 97.14%);
+	transition: 400ms;
+	transition-delay: 400ms;
+
+}
+
+@media screen and (max-width: 992px) {
+	.modalka-content {
+		width: 95%;
+		padding: 60px 30px;
+	}
+	.modalka-bg {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 150vh;
+		height: 150vh;
+	}
+}
+
+@media screen and (orientation: landscape) and (max-width: 992px) {
+	.modalka-bg {
+		width: 150vw;
+		height: 150vw;
+	}
+}
+@media screen and (orientation: portrait) and (max-width: 992px) {
+	.modalka-bg {
+		width: 150vh;
+		height: 150vh;
+	}
+}
+
+
+
+
+@media screen and (max-width: 568px) {
+	.modalka-content {
+		width: 95%;
+		padding: 60px 20px;
+	}
+}
+
+

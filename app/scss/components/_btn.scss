@@ -82,3 +82,39 @@
 	}
 }
 
+.btn-close {
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	transform: rotate(-45deg);
+	cursor: pointer;
+	transiton: 300ms;
+	&::before {
+		position: absolute;
+		content: '';
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 20px;
+		height: 2px;
+		background-color: white;
+	}
+	&::after {
+		position: absolute;
+		content: '';
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		height: 20px;
+		width: 2px;
+		background-color: white;
+	}
+
+	&:hover::after,
+	&:hover::before { 
+		background-color: white
+	}
+}

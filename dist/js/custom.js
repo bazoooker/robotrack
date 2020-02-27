@@ -1,13 +1,68 @@
+            // кнопка наверх
+    function showToTopButton() {
+        if ( window.pageYOffset > 500 ) {
+           $('.to-top').addClass('visible')
+        }
+        else {
+            $('.to-top').removeClass('visible')
+        }
+    };
+
+
+    function scrollToTop() {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+    }; 
+
+
 
 $(window).scroll(function() {
     var theta = $(window).scrollTop() / 10 % Math.PI;
     var thetaSlow = $(window).scrollTop() / 100 % Math.PI;
     $('.rotate-me-fast').css({ transform: 'rotate(' + theta + 'rad)' });
     $('.rotate-me-slow').css({ transform: 'rotate(' + thetaSlow + 'rad)' });
+    showToTopButton();
 });
 
 
 $(document).ready(function() {
+
+    $('.js-feature-hover').hover(function() {
+
+
+        if($(window).width() > 768) {
+            var self = $(this);
+            var path = $(self).find('.shape');
+            var atBeginning = !$(self).hasClass('active')
+            if(atBeginning) {
+                anime({
+                  targets: this.querySelector('.shape'),
+                  d: "M179 99.5C179 149.206 129.206 183 79.5 183C29.7944 183 0 126.206 0 76.5C0 26.7944 65.2944 0.5 115 0.5C164.706 0.5 179 49.7944 179 99.5Z",
+                  opacity: '1',
+                  duration: 300,
+                  loop: true,
+                  direction: 'normal',
+                  easing: "easeOutQuad",
+                  loop: false
+                });
+                $(self).addClass('active');
+            } else {
+                anime({
+                  targets: this.querySelector('.shape'),
+                  d: "M180 91.0735C180 140.779 139.706 181.5 90 181.5C40.2944 181.5 0 140.779 0 91.0735C0 41.3679 40.2944 0 90 0C139.706 0 180 41.3679 180 91.0735Z",
+                  opacity: '0.5',
+                  duration: 300,
+                  loop: true,
+                  direction: 'normal',
+                  easing: "easeOutQuad",
+                  loop: false
+                });
+                $(self).removeClass('active');
+            }
+        }
+
+
+    });
 
 
     $('.js-rotate-gears-on-hover').hover(function() {
@@ -19,9 +74,21 @@ $(document).ready(function() {
         $(this).toggleClass('is-active');
     });
 
+    // табы
+    $('.js-features-tab').click(function() {
+        if($(window).width() > 768) {
+            $('.js-features-tab').removeClass('active');
+            $(this).addClass('active');
+            var targetName = $(this).data('target');
+            $('.features-tab').hide();
+            $('#' + targetName).show();
+        }
+    });
+
 
     // универсальная открывалка: модалки, аккорденоы и пр
-    $('.js-opener').click(function(){
+    $('.js-opener').click(function(e){
+        e.preventDefault();
         var targetName = $(this).data('target-id');                        
         var elementToOpen = $('#' + targetName);
         var isClosed = $(elementToOpen).hasClass('hidden');
@@ -50,8 +117,9 @@ $(document).ready(function() {
 
     
 
-    var swiperHero = new Swiper('.js-swiper-about-us', {
+    var swiperAboutUs= new Swiper('.js-swiper-about-us', {
         spaceBetween: 20,
+        effect: 'fade',
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -92,6 +160,12 @@ $(document).ready(function() {
 
 
     $('select').niceSelect();
+
+
+
+    
+    $('.js-to-top').click(scrollToTop);
+    $(window).scroll(showToTopButton); 
 
 
  

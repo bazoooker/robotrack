@@ -25,6 +25,8 @@
 @import "components/img-decorated";
 @import "components/form";
 @import "components/photo";
+@import "components/modal";
+@import "components/to-top";
 
 @import "components/page-colors";
 
@@ -498,7 +500,7 @@
 	border-radius: 50%;
 	z-index: -1;
 	@include bg-contain;
-	transition: 400ms;
+	transition: 1200ms;
 	animation-play-state: paused;	
 }
 @keyframes anim-rocket-body {

@@ -1,0 +1,37 @@
+
+.to-top {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	text-align: center;
+	cursor: pointer;
+	transition: 300ms;
+	opacity: .85;
+	z-index: 9;
+
+	transform: translateX(160px);
+	&.visible {
+		transform: translateX(0px);
+	}
+	&:hover {
+		opacity: 1;
+		.to-top-icon {
+			transform: rotate(-90deg) translateX(4px);
+		}
+	}
+}
+.to-top-icon {
+	@include flex-row(nowrap,center,center);
+	width: 47px;
+	height: 47px;
+	background-color: $secondary;
+	border-radius: 50%;
+	transform: rotate(-90deg);
+	margin-bottom: 4px;
+	transition: 300ms;
+}
+.to-top-text {
+	@include font-size(12);
+	color: $dark;
+	// font-weight: bold;
+}
