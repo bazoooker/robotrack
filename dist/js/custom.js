@@ -20,6 +20,23 @@ $(document).ready(function() {
     });
 
 
+    // универсальная открывалка: модалки, аккорденоы и пр
+    $('.js-opener').click(function(){
+        var targetName = $(this).data('target-id');                        
+        var elementToOpen = $('#' + targetName);
+        var isClosed = $(elementToOpen).hasClass('hidden');
+        if(isClosed) {
+            $(elementToOpen).removeClass('hidden');
+        }else {
+            $(elementToOpen).addClass('hidden');
+        };
+    });
+    $('.js-closer').click(function(){
+        var targetName = $(this).data('target-id');                        
+        var elementToClose = $('#' + targetName);
+        $(elementToClose).addClass('hidden');
+    });
+
 
 
 
