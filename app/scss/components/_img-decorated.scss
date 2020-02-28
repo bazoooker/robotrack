@@ -13,3 +13,82 @@
 	    @include bg-contain;
 	}
 }
+
+
+
+
+
+
+
+// colors
+.wrapper {
+
+
+	&.page-green {
+		.img-decorated {
+			&::before {
+			    background-image: url(/img/bg/bg-slider-photo-green.svg);
+			}
+		}
+	}
+
+
+
+	&.page-red {
+		.img-decorated {
+			&::before {
+			    background-image: url(/img/bg/bg-slider-photo-red.svg);
+			}
+		}
+	}
+
+
+
+	&.page-yellow {
+		.img-decorated {
+			&::before {
+			    background-image: url(/img/bg/bg-slider-photo-yellow.svg);
+			}
+		}
+	}
+
+
+
+	&.page-orange {
+		.img-decorated {
+			&::before {
+			    background-image: url(/img/bg/bg-slider-photo-orange.svg);
+			}
+		}
+	}
+
+
+
+
+	&.page-violet {
+		.img-decorated {
+			&::before {
+			    background-image: url(/img/bg/bg-slider-photo-violet.svg);
+			}
+		}
+	}
+
+
+
+	&.page-brown {
+		.img-decorated {
+			&::before {
+			    background-image: url(/img/bg/bg-slider-photo-brown.svg);
+			}
+		}
+	}
+
+
+	&.page-pink {
+		.img-decorated {
+			&::before {
+			    background-image: url(/img/bg/bg-slider-photo-pink.svg);
+			}
+		}
+	}
+}

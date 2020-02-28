@@ -1,0 +1,253 @@
+// футер
+
+.footer {
+	position: relative;
+	z-index: 1;
+	.container {
+		position: relative;
+		.footer-image-gear {
+			&.one {
+				top: -210px;
+			    right: 13%;
+			    width: 84px;
+			    height: 84px;
+				background-image: url(/img/icons/i-gear-type2-red.svg);
+			}
+			&.two {
+				top: -240px;
+			    right: 0%;
+			    width: 160px;
+			    height: 160px;
+				background-image: url(/img/icons/i-gear-type3-red.svg);
+			}
+		}
+	}
+
+	&::before {
+		position: absolute;
+		content: '';
+		bottom: -3%;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 736px;
+		width: 100%;
+		z-index: -1;
+		pointer-events: none;		
+		background-size: cover;
+		background-position: bottom center;
+		background-image: url(/img/bg/bg-footer.svg);
+	}
+	.socials {
+		@include flex-row(nowrap,flex-end,center);
+		flex: 0 0 315px;
+	}
+	.socials-text {
+		flex: 0 0 190px;
+		max-width: 190px;
+		margin-right: 20px;
+	}
+	.socials-icons {
+		@include flex-row(nowrap,flex-end,center);
+		flex: 0 0 106px;
+		max-width: 106px;
+		.socials-icon {
+			position: relative;
+			margin-right: 15px;
+			svg path {
+				transition: 300ms;
+			}
+			&:last-child {margin-right: 0;}
+			&:hover  {
+				svg path {
+					fill: $secondary;
+				}
+			}
+		}
+	}
+}
+
+.footer-topbar {
+	@include flex-row(nowrap,space-between,center);
+	margin-bottom: 47px;
+	p {
+		line-height: 1.3;
+	}
+	.form-holder {
+		flex-grow: 1;
+		margin-right: 54px;
+		@include flex-row(nowrap,space-between,center);
+		p {
+			flex: 0 0 190px;
+			max-width: 190px;
+		}
+	}
+	.form-signup {
+		margin-left: auto;
+		@include flex-row(nowrap,flex-end,center);
+		flex-grow: 1;
+		.form-label,
+		.btn {
+			height: 45px;
+		}
+		.form-label {
+			flex: 1 0 316px;
+			max-width: 340px;
+		}
+	}
+}
+.footer-bottombar {
+	border-top: 2px dashed rgba(255,255,255,.2);
+	@include flex-row(nowrap,space-between,center);
+	padding: 28px 0;
+
+}
+
+
+
+
+
+
+
+
+// colors
+.wrapper {
+
+
+	&.page-green {
+		.footer {
+			&::before {
+				background-image: url(/img/bg/bg-footer-green.svg);
+			}
+			.container {
+				.footer-image-gear {
+					&.one {
+						background-image: url(/img/icons/i-gear-type2-yellow.svg);
+					}
+					&.two {
+						background-image: url(/img/icons/i-gear-type3-yellow.svg);
+					}
+				}
+			}
+		}
+	}
+
+
+
+	&.page-red {
+		.footer {
+			&::before {
+				background-image: url(/img/bg/bg-footer-red.svg);
+			}
+			.container {
+				.footer-image-gear {
+					&.one {
+						background-image: url(/img/icons/i-gear-type2-yellow.svg);
+					}
+					&.two {
+						background-image: url(/img/icons/i-gear-type3-yellow.svg);
+					}
+				}
+			}
+		}
+	}
+
+
+
+	&.page-yellow {
+		.footer {
+			&::before {
+				background-image: url(/img/bg/bg-footer-yellow.svg);
+			}
+			.container {
+				.footer-image-gear {
+					&.one {
+						background-image: url(/img/icons/i-gear-type2-red.svg);
+					}
+					&.two {
+						background-image: url(/img/icons/i-gear-type3-red.svg);
+					}
+				}
+			}
+		}
+	}
+
+
+
+	&.page-orange {
+		.footer {
+			&::before {
+				background-image: url(/img/bg/bg-footer-orange.svg);
+			}
+			.container {
+				.footer-image-gear {
+					&.one {
+						background-image: url(/img/icons/i-gear-type2-red.svg);
+					}
+					&.two {
+						background-image: url(/img/icons/i-gear-type3-red.svg);
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+	&.page-violet {
+		.footer {
+			&::before {
+				background-image: url(/img/bg/bg-footer-violet.svg);
+			}
+			.container {
+				.footer-image-gear {
+					&.one {
+						background-image: url(/img/icons/i-gear-type2-yellow.svg);
+					}
+					&.two {
+						background-image: url(/img/icons/i-gear-type3-yellow.svg);
+					}
+				}
+			}
+		}
+	}
+
+
+
+	&.page-brown {
+		.footer {
+			&::before {
+				background-image: url(/img/bg/bg-footer-brown.svg);
+			}
+			.container {
+				.footer-image-gear {
+					&.one {
+						background-image: url(/img/icons/i-gear-type2-red.svg);
+					}
+					&.two {
+						background-image: url(/img/icons/i-gear-type3-red.svg);
+					}
+				}
+			}
+		}
+	}
+
+
+	&.page-pink {
+		.footer {
+			&::before {
+				background-image: url(/img/bg/bg-footer-pink.svg);
+			}
+			.container {
+				.footer-image-gear {
+					&.one {
+						background-image: url(/img/icons/i-gear-type2-yellow.svg);
+					}
+					&.two {
+						background-image: url(/img/icons/i-gear-type3-yellow.svg);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,11 +1,5 @@
 
 
-
-
-
-
-
-
 .btn {
 	position: relative;
 	display: inline-block;
@@ -116,5 +110,67 @@
 	&:hover::after,
 	&:hover::before { 
 		background-color: white
+	}
+}
+
+
+
+
+// colors
+.wrapper {
+
+
+	&.page-green {
+		.btn-secondary {
+			background-color: $g-color-yellow;
+		}
+	}
+
+
+
+	&.page-red {
+		.btn-secondary {
+			background-color: $g-color-yellow;
+		}
+	}
+
+
+
+	&.page-yellow {
+		.btn-secondary {
+			background-color: $g-color-red;
+		}
+	}
+
+
+
+	&.page-orange {
+		.btn-secondary {
+			background-color: $g-color-red;
+		}
+	}
+
+
+
+
+	&.page-violet {
+		.btn-secondary {
+			background-color: $g-color-yellow;
+		}
+	}
+
+
+
+	&.page-brown {
+		.btn-secondary {
+			background-color: $g-color-red;
+		}
+	}
+
+
+	&.page-pink {
+		.btn-secondary {
+			background-color: $g-color-yellow;
+		}
 	}
 }

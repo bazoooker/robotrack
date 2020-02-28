@@ -44,6 +44,23 @@
 	}
 }
 
+.bg-features-4 {
+	position: relative;
+	margin: 0 0 200px 0;
+	&::before {
+		position: absolute;
+		content: '';
+		right: -34%;
+		top: -123%;
+		width: 150%;
+		height: 260%;
+		background-image: url(/img/bg/bg-features4-blue.svg);
+		background-size: 100% 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+}
+
 .bg-wave-ltr {
 	position: relative;
 	margin-bottom: 240px;
@@ -64,24 +81,19 @@
 	    pointer-events: none;
 	}
 }
-.bg-wave-rtl {
+.bg-form {
 	position: relative;
-	margin-bottom: 240px;
-	z-index: 1;
 	&::before {
 		position: absolute;
 		content: '';
-		width: 2304px;
-		height: 1200px;
-	    left: 50%;
-	    bottom: -50%;
-	    transform: translateX(-50%);
-	    background-image: url(/img/bg-page-deco/bg-wave-rtl.svg);
-	    background-size: contain;
-	    background-position: 100% 100%;
-	    background-repeat: no-repeat;
-	    z-index: -1;
-	    pointer-events: none;
+		right: -50%;
+		top: -140%;
+		width: 200%;
+		height: 300%;
+		background-image: url('/img/bg/bg-form-blue.svg');
+		background-size: 100% 100%;
+		background-position: center center;
+		background-repeat: no-repeat;
 	}
 }
 
@@ -103,6 +115,18 @@
 }
 
 @media screen and (max-width: 1200px) {
+	.bg-form {
+		&::before {
+			right: -50%;
+			top: -140%;
+			width: 200%;
+			height: 300%;
+			background-size: 100% 100%;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+	}
+
 	.bg-wave-ltr {
 		&::before {
 		    bottom: -135px;
@@ -116,6 +140,17 @@
 }
 
 @media screen and (max-width: 992px) {
+	.bg-form {
+		&::before {
+			right: -50%;
+			top: -140%;
+			width: 200%;
+			height: 300%;
+			background-size: 100% 100%;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+	}
 	.bg-wave-ltr {
 		margin-bottom: 140px;
 		&::before {
@@ -129,6 +164,17 @@
 
 
 @media screen and (max-width: 768px) {
+	.bg-form {
+		&::before {
+			right: -50%;
+			top: -140%;
+			width: 200%;
+			height: 300%;
+			background-size: 100% 100%;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+	}
 	.bg-wave-ltr {
 		margin-bottom: 140px;
 		.container {
@@ -148,6 +194,17 @@
 
 
 @media screen and (max-width: 568px) {
+	.bg-form {
+		&::before {
+			right: -50%;
+			top: -140%;
+			width: 200%;
+			height: 300%;
+			background-size: 100% 100%;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+	}
 	.bg-wave-ltr {
 		&::before {
 		    width: 2504px;
@@ -156,6 +213,120 @@
 		    top: 17%;
 		    bottom: auto;
 		    transform: translate(-50%, -50%);
+		}
+	}
+}
+
+
+
+
+
+
+
+// colors
+.wrapper {
+
+
+	&.page-green {
+		.bg-features-4 {
+			&::before {
+				background-image: url(/img/bg/bg-features4-green.svg);
+			}
+		}
+		.bg-form {
+			&::before {
+				background-image: url('/img/bg/bg-form-green.svg');
+			}
+		}
+	}
+
+
+
+	&.page-red {
+		.bg-features-4 {
+			&::before {
+				background-image: url(/img/bg/bg-features4-red.svg);
+			}
+		}
+		.bg-form {
+			&::before {
+				background-image: url('/img/bg/bg-form-red.svg');
+			}
+		}
+	}
+
+
+
+	&.page-yellow {
+		.bg-features-4 {
+			&::before {
+				background-image: url(/img/bg/bg-features4-yellow.svg);
+			}
+		}
+		.bg-form {
+			&::before {
+				background-image: url('/img/bg/bg-form-yellow.svg');
+			}
+		}
+	}
+
+
+
+	&.page-orange {
+		.bg-features-4 {
+			&::before {
+				background-image: url(/img/bg/bg-features4-orange.svg);
+			}
+		}
+		.bg-form {
+			&::before {
+				background-image: url('/img/bg/bg-form-orange.svg');
+			}
+		}
+	}
+
+
+
+
+	&.page-violet {
+		.bg-features-4 {
+			&::before {
+				background-image: url(/img/bg/bg-features4-violet.svg);
+			}
+		}
+		.bg-form {
+			&::before {
+				background-image: url('/img/bg/bg-form-violet.svg');
+			}
+		}
+	}
+
+
+
+	&.page-brown {
+		.bg-features-4 {
+			&::before {
+				background-image: url(/img/bg/bg-features4-brown.svg);
+			}
+		}
+		.bg-form {
+			&::before {
+				background-image: url('/img/bg/bg-form-brown.svg');
+			}
+		}
+	}
+
+
+	&.page-pink {
+		.bg-features-4 {
+			&::before {
+				background-image: url(/img/bg/bg-features4-pink.svg);
+			}
+		}
+		.bg-form {
+			&::before {
+				background-image: url('/img/bg/bg-form-pink.svg');
+			}
 		}
 	}
 }

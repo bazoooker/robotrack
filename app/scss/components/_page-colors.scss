@@ -1,17 +1,4 @@
 .page-blue {
-	// .hero-image-photo {
-	// 	.hero-image-gear {
-	// 		&:nth-of-type(1) {
-	// 			background-image: url(/img/icons/i-gear-hero-1.svg);
-	// 		}
-	// 		&:nth-of-type(2) {
-	// 			background-image: url(/img/icons/i-gear-hero-2.svg);
-	// 		}
-	// 		&:nth-of-type(3) {
-	// 			background-image: url(/img/icons/i-gear-hero-3.svg);
-	// 		}
-	// 	}
-	// }
 
 	.section-courses {
 		.section-courses-gear {
@@ -51,29 +38,5 @@
 		}
 	}
 
-	.footer {
-		&::before {
-			background-image: url(/img/bg/footer-bg.svg);
-		}
-
-		.container {
-			position: relative;
-			.footer-image-gear {
-				&.one {
-					top: -210px;
-				    right: 13%;
-				    width: 84px;
-				    height: 84px;
-					background-image: url(/img/icons/i-gear-hero-3.svg);
-				}
-				&.two {
-					top: -240px;
-				    right: 0%;
-				    width: 160px;
-				    height: 160px;
-					background-image: url(/img/icons/i-gear-hero-2.svg);
-				}
-			}
-		}
-	}
+	
 }
