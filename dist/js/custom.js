@@ -27,6 +27,21 @@ $(window).scroll(function() {
 
 $(document).ready(function() {
 
+    // аккордеоны
+    $('.js-accordeon').click(function() {
+        let accordIsOpen = $(this).parent().hasClass('accordeon_active');
+        $('.accordeon').removeClass('accordeon_active');
+        $('.accordeon').find('.accordeon__content').slideUp(300);
+        if(accordIsOpen) {
+            $(this).parent().removeClass('accordeon_active');
+            $(this).parent().find('.accordeon__content').slideUp(300);
+        }else {
+            $(this).parent().addClass('accordeon_active');
+            $(this).parent().find('.accordeon__content').slideDown(300);
+        }
+    });
+    
+
     $('.js-feature-hover').hover(function() {
 
 

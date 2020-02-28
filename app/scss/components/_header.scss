@@ -1,7 +1,4 @@
 .header {
-	// position: fixed;
-	// top: 0;
-	// left: 0;
 	width: 100%;
 	height: 102px;
 	z-index: 90;
@@ -30,29 +27,6 @@
 			background-position: top right;
 			background-repeat: no-repeat;
 		}
-		.deco-wave {
-			position: absolute;
-			right: 0;
-			bottom: -300px;
-			width: 1200px;
-			height: 600px;
-			z-index: -1;
-			pointer-events: none;
-		}
-		svg:nth-child(1) {
-			position: absolute;
-		    right: -306px;
-		    bottom: 20px;
-		    width: 100%;
-		    z-index: -1;
-		}
-		svg:nth-child(2) {
-			position: absolute;
-		    right: -267px;
-		    bottom: -124px;
-		    width: 100%;
-		    z-index: -2;
-		}
 	}
 	.header-nav {
 		margin: 0 55px 0 auto;
@@ -69,7 +43,7 @@
 		z-index: 1;
 		transition: 300ms;
 		user-select: none;
-		&.accented {
+		&.active {
 			&::after {
 				@include pseudo;
 				left: 50%;
@@ -82,10 +56,6 @@
 				transition: 300ms;
 			}
 		}
-		// &:active::before,
-		// &:focus::before {
-		// 	background-color: darken($secondary, 17%);
-		// }
 		&::before {
 			@include pseudo;
 			left: 50%;
@@ -102,7 +72,7 @@
 			opacity: 0;
 		}
 		&:hover {
-			&.accented::after {
+			&.active:after {
 				bottom: -7px;
 			}
 			&::before {
@@ -120,6 +90,158 @@
 		transition: 300ms;
 		svg {
 			margin: 0 14px 0 0;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+// colors
+.wrapper {
+
+
+	&.page-green {
+		.header {
+			.logo {
+				&::before {
+					background-image: url(/img/bg-page-deco/bg-logo-green.svg);
+				}
+			}
+			.header-tel path {
+				fill: $g-color-yellow;
+			}
+			.header-nav-link {
+				&::before {
+					background-color: $g-color-yellow;
+				}
+			}
+		}
+	}
+
+
+
+	&.page-red {
+		.header {
+			.logo {
+				&::before {
+					background-image: url(/img/bg-page-deco/bg-logo-red.svg);
+				}
+			}
+			.header-tel path {
+				fill: $g-color-yellow;
+			}
+			.header-nav-link {
+				&::before {
+					background-color: $g-color-yellow;
+				}
+			}
+		}
+	}
+
+
+
+	&.page-yellow {
+		.header {
+			.logo {
+				&::before {
+					background-image: url(/img/bg-page-deco/bg-logo-yellow.svg);
+				}
+			}
+			.header-tel path {
+				fill: $g-color-red;
+			}
+			.header-nav-link {
+				&::before {
+					background-color: $g-color-red;
+				}
+			}
+		}
+	}
+
+
+
+	&.page-orange {
+		.header {
+			.logo {
+				&::before {
+					background-image: url(/img/bg-page-deco/bg-logo-orange.svg);
+				}
+			}
+			.header-tel path {
+				fill: $g-color-red;
+			}
+			.header-nav-link {
+				&::before {
+					background-color: $g-color-red;
+				}
+			}
+		}
+	}
+
+
+
+
+	&.page-violet {
+		.header {
+			.logo {
+				&::before {
+					background-image: url(/img/bg-page-deco/bg-logo-violet.svg);
+				}
+			}
+			.header-tel path {
+				fill: $g-color-yellow;
+			}
+			.header-nav-link {
+				&::before {
+					background-color: $g-color-yellow;
+				}
+			}
+		}
+	}
+
+
+
+	&.page-brown {
+		.header {
+			.logo {
+				&::before {
+					background-image: url(/img/bg-page-deco/bg-logo-brown.svg);
+				}
+			}
+			.header-tel path {
+				fill: $g-color-red;
+			}
+			.header-nav-link {
+				&::before {
+					background-color: $g-color-red;
+				}
+			}
+		}
+	}
+
+
+	&.page-pink {
+		.header {
+			.logo {
+				&::before {
+					background-image: url(/img/bg-page-deco/bg-logo-pink.svg);
+				}
+			}
+			.header-tel path {
+				fill: $g-color-yellow;
+			}
+			.header-nav-link {
+				&::before {
+					background-color: $g-color-yellow;
+				}
+			}
 		}
 	}
 }

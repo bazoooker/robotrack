@@ -46,7 +46,7 @@ function serve() {
     });
 	watch( './app/js/*.js').on('change', series(scripts));
 	watch( './app/scss/**/*.scss').on('change', series(cssIntoSass));
-	watch( 'dist/*.html').on('change', beautifyHtml );
+	// watch( 'dist/*.html').on('change', beautifyHtml );
     watch( 'dist/*.html').on('change', browserSync.reload );
 };
 

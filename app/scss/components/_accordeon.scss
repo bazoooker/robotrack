@@ -1,0 +1,178 @@
+
+
+
+// block
+.accordeon {
+	cursor: pointer;
+	margin: 0 0 20px 0;
+}
+
+
+
+// elements
+.accordeon__label {
+	position: relative;
+	background-color: $primary;
+	color: white;
+	border-radius: 25px;
+	padding: 14px 60px 14px 22px;
+}
+.accordeon__icon {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	right: 22px;
+	top: 50%;
+	transform: translateY(-50%);
+	&::before,
+	&::after {
+		position: absolute;
+		content: '';
+		background-color: #fff;
+		border-radius: 4px;
+	}
+	&::before {
+		width: 2px;
+		height: 22px;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+	}
+	&::after {
+		height: 2px;
+		width: 22px;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+}
+.accordeon__content {
+	padding: 20px 22px 0 22px;
+	p:last-child {margin-bottom: 0;}
+}
+
+
+
+
+
+// states
+.accordeon_active {
+	.accordeon__label {
+		background-color: $secondary;
+	}
+	.accordeon__icon {
+		transform: translateY(-50%) rotate(45deg);
+	}
+}
+
+
+
+
+
+// general
+.accordeon__label,
+.accordeon__icon {
+	transition: 300ms;
+} 
+
+
+
+// vars
+
+
+
+// colors
+.wrapper {
+
+
+	&.page-green {
+		.accordeon__label {
+			background-color: $g-color-green;
+		}
+		.accordeon_active {
+			.accordeon__label {
+				background-color: $g-color-yellow;
+			}
+		}
+	}
+
+
+
+	&.page-red {
+		.accordeon__label {
+			background-color: $g-color-red;
+		}
+		.accordeon_active {
+			.accordeon__label {
+				background-color: $g-color-yellow;
+			}
+		}
+	}
+
+
+
+	&.page-yellow {
+		.accordeon__label {
+			background-color: $g-color-yellow;
+		}
+		.accordeon_active {
+			.accordeon__label {
+				background-color: $g-color-red;
+			}
+		}
+	}
+
+
+
+	&.page-orange {
+		.accordeon__label {
+			background-color: $g-color-orange;
+		}
+		.accordeon_active {
+			.accordeon__label {
+				background-color: $g-color-red;
+			}
+		}
+	}
+
+
+
+
+	&.page-violet {
+		.accordeon__label {
+			background-color: $g-color-violet;
+		}
+		.accordeon_active {
+			.accordeon__label {
+				background-color: $g-color-yellow;
+			}
+		}
+	}
+
+
+
+	&.page-brown {
+		.accordeon__label {
+			background-color: $g-color-brown;
+		}
+		.accordeon_active {
+			.accordeon__label {
+				background-color: $g-color-red;
+			}
+		}
+	}
+
+
+	&.page-pink {
+		.accordeon__label {
+			background-color: $g-color-pink;
+		}
+		.accordeon_active {
+			.accordeon__label {
+				background-color: $g-color-yellow;
+			}
+		}
+	}
+
+
+}
