@@ -10,7 +10,7 @@
 		left: 0%;
 		top: 60%;
 		z-index: -1;
-		background-image: url(/img/bg-page-deco/bg-promo-small.svg);
+		background-image: url(/img/bg/bg-promo-small-blue.svg);
 		background-size: contain;
 		background-position: top left;
 		background-repeat: no-repeat;
@@ -116,7 +116,7 @@
 	&.page-green {
 		.hero {
 			&::before {
-				background-image: url(/img/bg-page-deco/bg-promo-small.svg);
+				background-image: url(/img/bg/bg-promo-small-green.svg);
 			}
 			.hero-image {
 				&::before {
@@ -142,7 +142,7 @@
 	&.page-red {
 		.hero {
 			&::before {
-				background-image: url(/img/bg-page-deco/bg-promo-small.svg);
+				background-image: url(/img/bg/bg-promo-small-red.svg);
 			}
 			.hero-image {
 				&::before {
@@ -168,7 +168,7 @@
 	&.page-yellow {
 		.hero {
 			&::before {
-				background-image: url(/img/bg-page-deco/bg-promo-small.svg);
+				background-image: url(/img/bg/bg-promo-small-yellow.svg);
 			}
 			.hero-image {
 				&::before {
@@ -194,7 +194,7 @@
 	&.page-orange {
 		.hero {
 			&::before {
-				background-image: url(/img/bg-page-deco/bg-promo-small.svg);
+				background-image: url(/img/bg/bg-promo-small-orange.svg);
 			}
 			.hero-image {
 				&::before {
@@ -221,7 +221,7 @@
 	&.page-violet {
 		.hero {
 			&::before {
-				background-image: url(/img/bg-page-deco/bg-promo-small.svg);
+				background-image: url(/img/bg/bg-promo-small-violet.svg);
 			}
 			.hero-image {
 				&::before {
@@ -247,7 +247,7 @@
 	&.page-brown {
 		.hero {
 			&::before {
-				background-image: url(/img/bg-page-deco/bg-promo-small.svg);
+				background-image: url(/img/bg/bg-promo-small-brown.svg);
 			}
 			.hero-image {
 				&::before {
@@ -272,7 +272,7 @@
 	&.page-pink {
 		.hero {
 			&::before {
-				background-image: url(/img/bg-page-deco/bg-promo-small.svg);
+				background-image: url(/img/bg/bg-promo-small-pink.svg);
 			}
 			.hero-image {
 				&::before {

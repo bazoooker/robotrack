@@ -44,6 +44,11 @@
 	}
 }
 
+.rub {
+	font-style: normal !important;
+	font-weight: bold;
+}
+
 .bg-features-4 {
 	position: relative;
 	margin: 0 0 200px 0;
@@ -60,6 +65,27 @@
 		background-repeat: no-repeat;
 	}
 }
+
+
+.bg-price {
+	position: relative;
+	margin: 0 0 260px 0;
+	&::before {
+	    position: absolute;
+	    content: '';
+	    left: 50%;
+	    transform: translateX(-50%);
+	    top: -450px;
+	    width: 2100px;
+	    height: 1000px;
+	    background-image: url(/img/bg/bg-price-blue.svg);
+	    background-size: 100% 100%;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    z-index: -1;
+	}
+}
+
 
 .bg-wave-ltr {
 	position: relative;
@@ -238,6 +264,11 @@
 				background-image: url('/img/bg/bg-form-green.svg');
 			}
 		}
+		.bg-price {
+			&::before {
+			    background-image: url(/img/bg/bg-price-green.svg);
+			}
+		}
 	}
 
 
@@ -251,6 +282,11 @@
 		.bg-form {
 			&::before {
 				background-image: url('/img/bg/bg-form-red.svg');
+			}
+		}
+		.bg-price {
+			&::before {
+			    background-image: url(/img/bg/bg-price-red.svg);
 			}
 		}
 	}
@@ -268,6 +304,11 @@
 				background-image: url('/img/bg/bg-form-yellow.svg');
 			}
 		}
+		.bg-price {
+			&::before {
+			    background-image: url(/img/bg/bg-price-yellow.svg);
+			}
+		}
 	}
 
 
@@ -281,6 +322,11 @@
 		.bg-form {
 			&::before {
 				background-image: url('/img/bg/bg-form-orange.svg');
+			}
+		}
+		.bg-price {
+			&::before {
+			    background-image: url(/img/bg/bg-price-orange.svg);
 			}
 		}
 	}
@@ -299,6 +345,11 @@
 				background-image: url('/img/bg/bg-form-violet.svg');
 			}
 		}
+		.bg-price {
+			&::before {
+			    background-image: url(/img/bg/bg-price-violet.svg);
+			}
+		}
 	}
 
 
@@ -314,6 +365,11 @@
 				background-image: url('/img/bg/bg-form-brown.svg');
 			}
 		}
+		.bg-price {
+			&::before {
+			    background-image: url(/img/bg/bg-price-brown.svg);
+			}
+		}
 	}
 
 
@@ -326,6 +382,11 @@
 		.bg-form {
 			&::before {
 				background-image: url('/img/bg/bg-form-pink.svg');
+			}
+		}
+		.bg-price {
+			&::before {
+			    background-image: url(/img/bg/bg-price-pink.svg);
 			}
 		}
 	}

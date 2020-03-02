@@ -8583,6 +8583,36 @@ ol {
       font-size: 16px;
       font-weight: 600; }
 
+.checklist li {
+  position: relative;
+  padding: 0 0 0 25px;
+  font-size: 1rem; }
+  .checklist li::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    background-image: url(/img/icons/i-checkmark-yellow.svg);
+    background-color: transparent !important;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat; }
+
+.checklist.checklist_pricing {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  .checklist.checklist_pricing li {
+    flex: 0 0 50%;
+    margin: 0 0 25px 0;
+    padding: 0 25px 0 25px; }
+
+.checklist.text-white li::before {
+  background-image: url(/img/icons/i-checkmark-white.svg); }
+
 /*utilities*/
 /*text utilities*/
 .text-center {
@@ -8621,6 +8651,10 @@ ol {
     height: auto;
     min-height: 100vh; }
 
+.rub {
+  font-style: normal !important;
+  font-weight: bold; }
+
 .bg-features-4 {
   position: relative;
   margin: 0 0 200px 0; }
@@ -8635,6 +8669,23 @@ ol {
     background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat; }
+
+.bg-price {
+  position: relative;
+  margin: 0 0 260px 0; }
+  .bg-price::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    top: -450px;
+    width: 2100px;
+    height: 1000px;
+    background-image: url(/img/bg/bg-price-blue.svg);
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1; }
 
 .bg-wave-ltr {
   position: relative;
@@ -8758,11 +8809,17 @@ ol {
 .wrapper.page-green .bg-form::before {
   background-image: url("/img/bg/bg-form-green.svg"); }
 
+.wrapper.page-green .bg-price::before {
+  background-image: url(/img/bg/bg-price-green.svg); }
+
 .wrapper.page-red .bg-features-4::before {
   background-image: url(/img/bg/bg-features4-red.svg); }
 
 .wrapper.page-red .bg-form::before {
   background-image: url("/img/bg/bg-form-red.svg"); }
+
+.wrapper.page-red .bg-price::before {
+  background-image: url(/img/bg/bg-price-red.svg); }
 
 .wrapper.page-yellow .bg-features-4::before {
   background-image: url(/img/bg/bg-features4-yellow.svg); }
@@ -8770,11 +8827,17 @@ ol {
 .wrapper.page-yellow .bg-form::before {
   background-image: url("/img/bg/bg-form-yellow.svg"); }
 
+.wrapper.page-yellow .bg-price::before {
+  background-image: url(/img/bg/bg-price-yellow.svg); }
+
 .wrapper.page-orange .bg-features-4::before {
   background-image: url(/img/bg/bg-features4-orange.svg); }
 
 .wrapper.page-orange .bg-form::before {
   background-image: url("/img/bg/bg-form-orange.svg"); }
+
+.wrapper.page-orange .bg-price::before {
+  background-image: url(/img/bg/bg-price-orange.svg); }
 
 .wrapper.page-violet .bg-features-4::before {
   background-image: url(/img/bg/bg-features4-violet.svg); }
@@ -8782,17 +8845,26 @@ ol {
 .wrapper.page-violet .bg-form::before {
   background-image: url("/img/bg/bg-form-violet.svg"); }
 
+.wrapper.page-violet .bg-price::before {
+  background-image: url(/img/bg/bg-price-violet.svg); }
+
 .wrapper.page-brown .bg-features-4::before {
   background-image: url(/img/bg/bg-features4-brown.svg); }
 
 .wrapper.page-brown .bg-form::before {
   background-image: url("/img/bg/bg-form-brown.svg"); }
 
+.wrapper.page-brown .bg-price::before {
+  background-image: url(/img/bg/bg-price-brown.svg); }
+
 .wrapper.page-pink .bg-features-4::before {
   background-image: url(/img/bg/bg-features4-pink.svg); }
 
 .wrapper.page-pink .bg-form::before {
   background-image: url("/img/bg/bg-form-pink.svg"); }
+
+.wrapper.page-pink .bg-price::before {
+  background-image: url(/img/bg/bg-price-pink.svg); }
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -13060,7 +13132,7 @@ button.swiper-pagination-bullet {
     left: 0%;
     top: 60%;
     z-index: -1;
-    background-image: url(/img/bg-page-deco/bg-promo-small.svg);
+    background-image: url(/img/bg/bg-promo-small-blue.svg);
     background-size: contain;
     background-position: top left;
     background-repeat: no-repeat; }
@@ -13136,7 +13208,7 @@ button.swiper-pagination-bullet {
       height: auto; }
 
 .wrapper.page-green .hero::before {
-  background-image: url(/img/bg-page-deco/bg-promo-small.svg); }
+  background-image: url(/img/bg/bg-promo-small-green.svg); }
 
 .wrapper.page-green .hero .hero-image::before {
   background-image: url(/img/bg-page-deco/bg-promo-photo-green.svg); }
@@ -13151,7 +13223,7 @@ button.swiper-pagination-bullet {
   background-image: url(/img/icons/i-gear-type2-red.svg); }
 
 .wrapper.page-red .hero::before {
-  background-image: url(/img/bg-page-deco/bg-promo-small.svg); }
+  background-image: url(/img/bg/bg-promo-small-red.svg); }
 
 .wrapper.page-red .hero .hero-image::before {
   background-image: url(/img/bg-page-deco/bg-promo-photo-red.svg); }
@@ -13166,7 +13238,7 @@ button.swiper-pagination-bullet {
   background-image: url(/img/icons/i-gear-type2-red.svg); }
 
 .wrapper.page-yellow .hero::before {
-  background-image: url(/img/bg-page-deco/bg-promo-small.svg); }
+  background-image: url(/img/bg/bg-promo-small-yellow.svg); }
 
 .wrapper.page-yellow .hero .hero-image::before {
   background-image: url(/img/bg-page-deco/bg-promo-photo-yellow.svg); }
@@ -13181,7 +13253,7 @@ button.swiper-pagination-bullet {
   background-image: url(/img/icons/i-gear-type2-yellow.svg); }
 
 .wrapper.page-orange .hero::before {
-  background-image: url(/img/bg-page-deco/bg-promo-small.svg); }
+  background-image: url(/img/bg/bg-promo-small-orange.svg); }
 
 .wrapper.page-orange .hero .hero-image::before {
   background-image: url(/img/bg-page-deco/bg-promo-photo-orange.svg); }
@@ -13196,7 +13268,7 @@ button.swiper-pagination-bullet {
   background-image: url(/img/icons/i-gear-type2-yellow.svg); }
 
 .wrapper.page-violet .hero::before {
-  background-image: url(/img/bg-page-deco/bg-promo-small.svg); }
+  background-image: url(/img/bg/bg-promo-small-violet.svg); }
 
 .wrapper.page-violet .hero .hero-image::before {
   background-image: url(/img/bg-page-deco/bg-promo-photo-violet.svg); }
@@ -13211,7 +13283,7 @@ button.swiper-pagination-bullet {
   background-image: url(/img/icons/i-gear-type2-red.svg); }
 
 .wrapper.page-brown .hero::before {
-  background-image: url(/img/bg-page-deco/bg-promo-small.svg); }
+  background-image: url(/img/bg/bg-promo-small-brown.svg); }
 
 .wrapper.page-brown .hero .hero-image::before {
   background-image: url(/img/bg-page-deco/bg-promo-photo-brown.svg); }
@@ -13226,7 +13298,7 @@ button.swiper-pagination-bullet {
   background-image: url(/img/icons/i-gear-type2-yellow.svg); }
 
 .wrapper.page-pink .hero::before {
-  background-image: url(/img/bg-page-deco/bg-promo-small.svg); }
+  background-image: url(/img/bg/bg-promo-small-pink.svg); }
 
 .wrapper.page-pink .hero .hero-image::before {
   background-image: url(/img/bg-page-deco/bg-promo-photo-pink.svg); }
@@ -14003,6 +14075,43 @@ button.swiper-pagination-bullet {
   font-size: 0.75rem;
   color: #2E2E2E; }
 
+.section-program {
+  margin: 0 0 220px 0; }
+
+.section-courses {
+  margin: 0 0 220px 0;
+  z-index: 1; }
+  .section-courses .container {
+    position: relative;
+    z-index: 2; }
+
+.section-form {
+  margin: 0 0 320px 0; }
+
+.section-news {
+  margin: 0 0 180px 0; }
+
+.section-team {
+  position: relative; }
+  .section-team::before {
+    position: absolute;
+    content: '';
+    top: -900px;
+    left: 0;
+    width: 50vw;
+    height: 55vw;
+    pointer-events: none;
+    background-image: url(/img/bg-page-deco/bg-team-deco.svg);
+    background-size: contain;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    z-index: -1; }
+
+.inner-page .section-team {
+  margin: 0 0 240px 0; }
+  .inner-page .section-team::before {
+    display: none; }
+
 .accordeon {
   cursor: pointer;
   margin: 0 0 20px 0; }
@@ -14096,6 +14205,34 @@ button.swiper-pagination-bullet {
 .wrapper.page-pink .accordeon_active .accordeon__label {
   background-color: #FFBF01; }
 
+.price {
+  position: relative;
+  display: block;
+  line-height: 1.2;
+  z-index: 1; }
+  .price::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1000px;
+    left: -36%;
+    bottom: -355px;
+    background-image: url(/img/bg/bg-price-rocket.svg);
+    background-position: bottom left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1; }
+
+.price__numbers {
+  font-size: 3.75rem;
+  font-family: "Russo One", sans-serif; }
+  @media (max-width: 1200px) {
+    .price__numbers {
+      font-size: calc(1.5rem + 3vw) ; } }
+
+.price__units {
+  font-family: "Russo One", sans-serif; }
+
 .page-blue .section-courses .section-courses-gear:nth-of-type(1) {
   right: -15px;
   top: 40%;
@@ -14124,35 +14261,6 @@ button.swiper-pagination-bullet {
   height: 140px;
   background-image: url(/img/bg/bg-gear-big-2-blue.svg); }
 
-.section-courses {
-  margin: 0 0 220px 0;
-  z-index: 1; }
-  .section-courses .container {
-    position: relative;
-    z-index: 2; }
-
-.section-form {
-  margin: 0 0 320px 0; }
-
-.section-news {
-  margin: 0 0 180px 0; }
-
-.section-team {
-  position: relative; }
-  .section-team::before {
-    position: absolute;
-    content: '';
-    top: -900px;
-    left: 0;
-    width: 50vw;
-    height: 55vw;
-    pointer-events: none;
-    background-image: url(/img/bg-page-deco/bg-team-deco.svg);
-    background-size: contain;
-    background-position: bottom left;
-    background-repeat: no-repeat;
-    z-index: -1; }
-
 .slider-team {
   position: relative;
   margin: 0 -30px 0 -30px;
@@ -14177,6 +14285,9 @@ button.swiper-pagination-bullet {
     z-index: 2;
     background: white;
     background: linear-gradient(270deg, white 0%, rgba(255, 255, 255, 0) 100%); }
+
+.inner-page .slider-team::before, .inner-page .slider-team::after {
+  display: none; }
 
 .theme-pagination.bottom-50 {
   bottom: 50px;
@@ -14211,7 +14322,7 @@ button.swiper-pagination-bullet {
 .theme-card {
   position: relative;
   border-radius: 8px;
-  box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.13);
   padding: 20px;
   background-color: #fff;
   overflow: hidden; }

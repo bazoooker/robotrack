@@ -195,3 +195,36 @@ ol{
 
 
 
+.checklist {
+  li {
+    position: relative;
+    padding: 0 0 0 25px;
+    @include font-size(16);
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 2px;
+      width: 16px;
+      height: 16px;
+      background-image: url(/img/icons/i-checkmark-yellow.svg);
+      background-color: transparent !important;
+      @include bg-contain;    
+    }
+  }
+  &.checklist_pricing {
+    @include flex-row(wrap, flex-start, flex-start);
+    li {
+      flex: 0 0 50%;
+      margin: 0 0 25px 0;
+      padding: 0 25px 0 25px;
+    }
+  }
+  &.text-white {
+    li {
+      &::before {
+        background-image: url(/img/icons/i-checkmark-white.svg);
+      }
+    }
+  }
+}
