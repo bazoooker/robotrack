@@ -4,6 +4,7 @@
 	display: block;
 	line-height: 1.2;
 	z-index: 1;
+	user-select: none;
 	
 	&::before {
 		position: absolute;
@@ -17,6 +18,7 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		z-index: -1;
+		pointer-events: none;
 	}
 }
 
@@ -30,4 +32,31 @@
 .price__units {
 	font-family: $font-primary;
 	// font-weight: bold !important;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+	.price {
+		&::before {
+			height: 1300px; //bg-price height. См в utilities
+			bottom: -285px;
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 992px) {
+	.price {
+		&::before {
+			height: 400px; //bg-price height. См в utilities
+			width: 100%;
+			left: auto;
+			right: 0px;
+			bottom: -285px;
+			background-position: bottom right;
+		}
+	}
 }

@@ -54,15 +54,16 @@
 	margin: 0 0 200px 0;
 	&::before {
 		position: absolute;
-		content: '';
-		right: -34%;
-		top: -123%;
-		width: 150%;
-		height: 260%;
-		background-image: url(/img/bg/bg-features4-blue.svg);
-		background-size: 100% 100%;
-		background-position: center center;
-		background-repeat: no-repeat;
+	    content: '';
+	    left: 55%;
+	    top: -570px;
+	    width: 2000px;
+	    height: 1300px;
+	    background-image: url(/img/bg/bg-features4-blue.svg);
+	    transform: translateX(-50%);
+	    background-size: contain;
+	    background-position: center center;
+	    background-repeat: no-repeat;
 	}
 }
 
@@ -83,6 +84,7 @@
 	    background-position: center center;
 	    background-repeat: no-repeat;
 	    z-index: -1;
+	    pointer-events: none;
 	}
 }
 
@@ -163,6 +165,15 @@
 			background-image: url(/img/bg/bg-features-mobile.svg);
 		}
 	}
+	.bg-price {
+		margin: 0 0 320px 0;
+		&::before {
+		    top: -560px;
+		    width: 2600px;
+		    height: 1300px;
+		    background-image: url(/img/bg/bg-price-blue.svg);
+		}
+	}
 }
 
 @media screen and (max-width: 992px) {
@@ -186,16 +197,20 @@
 		    bottom: -111px;
 		}
 	}
+	.bg-price {
+		margin: 0 0 270px 0;
+	}
 }
 
 
 @media screen and (max-width: 768px) {
 	.bg-form {
 		&::before {
-			right: -50%;
-			top: -140%;
-			width: 200%;
-			height: 300%;
+			left: 50%;
+			top: -485px;
+			width: 2600px;
+			height: 1200px;
+			transform: translateX(-50%);
 			background-size: 100% 100%;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -216,21 +231,25 @@
 		    transform: translate(-50%, -50%);
 		}
 	}
+	.bg-price {
+		margin: 0 0 240px 0;
+		&::before {
+		    transform: translateX(-50%);
+		    top: -530px;
+		    width: 2800px;
+		    height: 1300px;
+		    background-image: url(/img/bg/bg-price-blue.svg);
+		    background-size: 100% 100%;
+		    background-position: center center;
+		    background-repeat: no-repeat;
+		    z-index: -1;
+		    pointer-events: none;
+		}
+	}
 }
 
 
 @media screen and (max-width: 568px) {
-	.bg-form {
-		&::before {
-			right: -50%;
-			top: -140%;
-			width: 200%;
-			height: 300%;
-			background-size: 100% 100%;
-			background-position: center center;
-			background-repeat: no-repeat;
-		}
-	}
 	.bg-wave-ltr {
 		&::before {
 		    width: 2504px;
@@ -241,12 +260,22 @@
 		    transform: translate(-50%, -50%);
 		}
 	}
+	.bg-price {
+		margin: 0 0 240px 0;
+	}
 }
-
-
-
-
-
+@media screen and (max-width: 414px) {
+	.bg-form {
+		&::before {
+			top: -520px;
+			width: 2800px;
+			height: 1300px;
+		}
+	}
+	.bg-price {
+		margin: 0 0 190px 0;
+	}
+}
 
 
 // colors

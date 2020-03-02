@@ -228,3 +228,38 @@ ol{
     }
   }
 }
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .checklist {
+    &.checklist_pricing {
+      li {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .checklist {
+    &.checklist_pricing {
+      li {
+        flex: 0 0 50%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 414px) {
+  .checklist {
+    &.checklist_pricing {
+      li {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}
