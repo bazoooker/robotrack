@@ -125,6 +125,15 @@
 		transition: 300ms;
 		svg {
 			margin: 0 14px 0 0;
+			path {
+				transition: 300ms;
+			}
+		}
+		&:hover {
+			svg path {
+				fill: $secondary !important;
+			}
+			color: $secondary;
 		}
 	}
 }

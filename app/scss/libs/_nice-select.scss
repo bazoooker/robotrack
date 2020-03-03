@@ -24,7 +24,7 @@ $gray_light: $primary;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: #fff;
   box-sizing: border-box;
-  border: 2px solid transparent;
+  // border: 2px solid transparent;
   clear: both;
   cursor: pointer;
   display: block;
@@ -53,7 +53,7 @@ $gray_light: $primary;
     border-color: darken($gray_light, 5%);
   }
   &:active, &:focus {
-    border-color: $primary;
+    box-shadow: inset 0px 0px 0px 3px $secondary;
   }
   // Arrow
   &:after { 
@@ -79,7 +79,7 @@ $gray_light: $primary;
     width: 8px;
   }
 
-  span, li {color: $black;}
+  span, li {color: $dark;}
   
   &.open {
     @extend :active;
@@ -114,7 +114,7 @@ $gray_light: $primary;
     display: block;
     /* width: 15rem; */
     overflow: hidden;
-    font-size: 14px;
+    @include font-size(16);
     line-height: 38px;
   }
   

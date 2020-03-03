@@ -56,9 +56,9 @@
 		position: absolute;
 	    content: '';
 	    left: 55%;
-	    top: -570px;
-	    width: 2000px;
-	    height: 1300px;
+	    top: -630px;
+	    width: 2200px;
+	    height: 1400px;
 	    background-image: url(/img/bg/bg-features4-blue.svg);
 	    transform: translateX(-50%);
 	    background-size: contain;
@@ -85,6 +85,76 @@
 	    background-repeat: no-repeat;
 	    z-index: -1;
 	    pointer-events: none;
+	}
+}
+
+.u-deco-robot {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform: scale(1.6);
+	background-image: url(/img/bg/bg-robot.svg);
+	@include bg-contain;
+	pointer-events: none;
+	&.active {
+		.u-deco-robot__shape {
+			animation: anim-bubble 3000ms;
+		}
+	}
+	.u-deco-robot__bubble {
+		position: absolute;
+		width: 43px;
+		height: 43px;
+		right: 145px;
+		top: 58px;
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+@keyframes anim-bubble {
+	0% {
+		opacity: 0;
+		fill: transparent;
+	}
+	8% {
+		opacity: 1;
+		fill: transparent;
+	}
+
+	22% {
+		opacity: 0;
+		fill: transparent;
+	}
+	24% {
+		opacity: 1;
+		fill: transparent;
+	}
+	28% {
+		opacity: 0;
+		fill: transparent;
+	}
+	30% {
+		opacity: 1;
+		fill: transparent;
+	}
+
+	52% {
+		opacity: 0;
+		fill: transparent;
+	}
+	54% {
+		opacity: 1;
+		fill: transparent;
+	}
+	70% {
+		opacity: 0;
+		fill: transparent;
+	}
+	100% {
+		opacity: 1;
+		fill: #FFD862;
 	}
 }
 
@@ -174,6 +244,11 @@
 		    background-image: url(/img/bg/bg-price-blue.svg);
 		}
 	}
+	.u-deco-robot {
+		background-image: url(/img/bg/bg-robot-full.svg);
+		transform: scale(1.3);
+		.u-deco-robot__bubble {display: none;}
+	}
 }
 
 @media screen and (max-width: 992px) {
@@ -199,6 +274,9 @@
 	}
 	.bg-price {
 		margin: 0 0 270px 0;
+	}
+	.u-deco-robot {
+		transform: scale(1.1);
 	}
 }
 

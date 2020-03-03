@@ -40,11 +40,9 @@ $(document).ready(function() {
             $(this).parent().find('.accordeon__content').slideDown(300);
         }
     });
-    
-
-    $('.js-feature-hover').hover(function() {
 
 
+    $('.js-feature-hover').mouseenter(function() {
         if($(window).width() > 768) {
             var self = $(this);
             var path = $(self).find('.shape');
@@ -53,7 +51,7 @@ $(document).ready(function() {
                 anime({
                   targets: this.querySelector('.shape'),
                   d: "M179 99.5C179 149.206 129.206 183 79.5 183C29.7944 183 0 126.206 0 76.5C0 26.7944 65.2944 0.5 115 0.5C164.706 0.5 179 49.7944 179 99.5Z",
-                  opacity: '1',
+                  opacity: '0.75',
                   duration: 300,
                   loop: true,
                   direction: 'normal',
@@ -61,7 +59,16 @@ $(document).ready(function() {
                   loop: false
                 });
                 $(self).addClass('active');
-            } else {
+            }
+        }
+    });
+
+    $('.js-feature-hover').mouseleave(function() {
+        if($(window).width() > 768) {
+            var self = $(this);
+            var path = $(self).find('.shape');
+            var clicked = !$(self).hasClass('current')
+            if(clicked) {
                 anime({
                   targets: this.querySelector('.shape'),
                   d: "M180 91.0735C180 140.779 139.706 181.5 90 181.5C40.2944 181.5 0 140.779 0 91.0735C0 41.3679 40.2944 0 90 0C139.706 0 180 41.3679 180 91.0735Z",
@@ -75,9 +82,8 @@ $(document).ready(function() {
                 $(self).removeClass('active');
             }
         }
-
-
     });
+
 
 
     $('.js-rotate-gears-on-hover').hover(function() {
@@ -89,11 +95,42 @@ $(document).ready(function() {
         $(this).toggleClass('is-active');
     });
 
+
     // табы
     $('.js-features-tab').click(function() {
         if($(window).width() > 768) {
-            $('.js-features-tab').removeClass('active');
-            $(this).addClass('active');
+            $('.js-features-tab').each(function() {
+                $(this).removeClass('current active')
+                var self = $(this);
+                var path = $(self).find('.shape');
+                var atBeginning = !$(self).hasClass('active');
+                if(atBeginning) {
+                    anime({
+                      targets: this.querySelector('.shape'),
+                      d: "M180 91.0735C180 140.779 139.706 181.5 90 181.5C40.2944 181.5 0 140.779 0 91.0735C0 41.3679 40.2944 0 90 0C139.706 0 180 41.3679 180 91.0735Z",
+                      opacity: '0.5',
+                      duration: 300,
+                      loop: true,
+                      direction: 'normal',
+                      easing: "easeOutQuad",
+                      loop: false
+                    });
+                }
+            });
+            // $(this).addClass('current active');
+            $(this).addClass('current active');
+            $('.js-features-tab.current.active').each(function() {
+                anime({
+                  targets: this.querySelector('.shape'),
+                  d: "M179 99.5C179 149.206 129.206 183 79.5 183C29.7944 183 0 126.206 0 76.5C0 26.7944 65.2944 0.5 115 0.5C164.706 0.5 179 49.7944 179 99.5Z",
+                  opacity: '1',
+                  duration: 300,
+                  loop: true,
+                  direction: 'normal',
+                  easing: "easeOutQuad",
+                  loop: false
+                });
+            });
             var targetName = $(this).data('target');
             $('.features-tab').hide();
             $('#' + targetName).show();
