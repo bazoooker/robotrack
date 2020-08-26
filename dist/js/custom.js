@@ -169,12 +169,15 @@ $(document).ready(function() {
 
     
 
-    var swiperAboutUs= new Swiper('.js-swiper-about-us', {
+    var swiperAboutUs = new Swiper('.js-swiper-about-us', {
         spaceBetween: 20,
         effect: 'fade',
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+        },
+        autoplay: {
+          delay: 2000,
         },
     });
 
