@@ -1,0 +1,47 @@
+.filters {
+	border-radius: 8px;
+	box-shadow: 0 0 12px 1px rgba(0,0,0,.13);
+	padding: 20px;
+	overflow: hidden;
+	&__heading {
+		margin: -20px -20px 20px -20px;
+		background-color: $primary;
+		padding: 20px;
+		text-align: center;
+
+	}
+}
+
+.wrapper.page-red {
+	.filters {
+		.filters__heading {
+			background-color: $g-color-red;
+		}
+	}
+}
+.wrapper.page-yellow {
+	.filters__heading {
+		background-color: $g-color-yellow;
+	}
+}
+.wrapper.page-orange {
+	.filters__heading {
+		background-color: $g-color-orange;
+	}
+}
+.wrapper.page-violet {
+	.filters__heading {
+		background-color: $g-color-violet;
+	}
+}
+.wrapper.page-brown {
+	.filters__heading {
+		background-color: $g-color-brown;
+	}
+}
+.wrapper.page-pink {
+	.filters__heading {
+		background-color: $g-color-pink;
+	}
+}
+

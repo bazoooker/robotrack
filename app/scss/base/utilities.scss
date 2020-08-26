@@ -1,5 +1,9 @@
 	/*utilities*/
 
+	.mb-40 {
+		margin-bottom: 40px !important;
+	}
+
 
 /*text utilities*/
 
@@ -341,6 +345,9 @@
 	.bg-price {
 		margin: 0 0 240px 0;
 	}
+	.sm-d-none {
+		display: none;
+	}
 }
 @media screen and (max-width: 414px) {
 	.bg-form {
@@ -352,6 +359,9 @@
 	}
 	.bg-price {
 		margin: 0 0 190px 0;
+	}
+	.xs-d-none {
+		display: none;
 	}
 }
 

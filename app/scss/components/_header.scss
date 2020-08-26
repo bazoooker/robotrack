@@ -64,7 +64,7 @@
 		}
 	}
 	.header-nav {
-		margin: 0 55px 0 auto;
+		margin: 0 30px 0 auto;
 		height: 100%;
 		@include flex-row(nowrap, flex-start, center);
 	}
@@ -117,6 +117,9 @@
 			color: #fff;
 
 		}
+	}
+	.soc {
+		margin-right: 30px;
 	}
 	.header-tel {
 		@include flex-row(nowrap,flex-start,center);
@@ -348,6 +351,9 @@
 				&::before,
 				&::after {display: none;}
 			}
+		}
+		.soc {
+			margin-right: 10px;
 		}
 	}
 
