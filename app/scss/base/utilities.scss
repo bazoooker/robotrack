@@ -4,6 +4,12 @@
 		margin-bottom: 40px !important;
 	}
 
+.user-actions-none {
+	pointer-events: none;
+	cursor: default;
+	user-select: none;
+}
+
 
 /*text utilities*/
 
@@ -22,16 +28,16 @@
 }
 
 .font-size-16 {
-	@include font-size(16px);
+	@include font-size(16);
 }
 .font-size-18 {
-	@include font-size(18px);
+	@include font-size(18);
 }
 .font-size-20 {
-	@include font-size(20px);
+	@include font-size(20);
 }
 .font-size-26 {
-	@include font-size(26px);
+	@include font-size(26);
 }
 
 /*color utilities*/

@@ -44,13 +44,15 @@
 
 .btn-primary {}
 .btn-secondary {
-	&:hover {
+	&:hover,
+	&.active {
 		animation: anim-btn 300ms;
 		.btn-hover {
 			opacity: 1;
 		}
 	}
 }
+
 
 
 

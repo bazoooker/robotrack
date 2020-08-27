@@ -156,6 +156,38 @@ $(document).ready(function() {
         $(elementToClose).addClass('hidden');
     });
 
+    // универсальная менялка. Может менять любой класс у любого набора элементов
+    // в html передаем три дата-параметра:
+    // 1. элемент, который нужно изменить
+    // 2. класс, который нужно накинуть/убрать
+    // 3. тип дйствия: убрать, добавить, тогл
+    $('.js-changer').click(function(e, target, classToChage, action) {
+        e.preventDefault();
+        var target          = $(this).data('changer-target');                    
+        var classToChage    = $(this).data('changer-class');                        
+        var action          = $(this).data('changer-action');
+
+        if(action == "remove") {
+            $('.' + target).removeClass(classToChage);
+        };
+        if(action == "add") {
+            $('.' + target).addClass(classToChage);
+        };
+        if(action == "toggle") {
+            $('.' + target).toggleClass(classToChage);
+        };
+    });
+
+
+    // Думаю, это нужно отправить в ajax файл on success фильтра
+    $('.js-close-filters-on-mobile').click(function(e, breakPoint) {
+      e.preventDefault();
+      var breakPoint = $(this).data('breakpoint');
+      if($(window).width() < breakPoint) {
+        $('.filters').removeClass('opened');
+      }
+    });
+
 
 
 
