@@ -127,6 +127,9 @@
 		font-family: $font-primary;
 		text-decoration: none;
 		transition: 300ms;
+		a:hover {
+			text-decoration: none;
+		}
 		svg {
 			margin: 0 14px 0 0;
 			path {

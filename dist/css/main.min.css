@@ -13741,6 +13741,8 @@ button.swiper-pagination-bullet {
     font-family: "Russo One", sans-serif;
     text-decoration: none;
     transition: 300ms; }
+    .header .header-tel a:hover {
+      text-decoration: none; }
     .header .header-tel svg {
       margin: 0 14px 0 0; }
       .header .header-tel svg path {
@@ -14363,6 +14365,13 @@ button.swiper-pagination-bullet {
     display: inline-block;
     margin: 0 6px 0 0;
     text-decoration: none; }
+
+.link-wa {
+  padding-left: 22px;
+  background-image: url(/img/icons/i-wa-white.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 14px; }
 
 .link-theme {
   transition: 300ms; }

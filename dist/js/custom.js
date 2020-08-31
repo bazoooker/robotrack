@@ -27,6 +27,8 @@ $(window).scroll(function() {
 
 $(document).ready(function() {
 
+  $('.js-mask-tel').mask('+7 (999) 999-99-99', {placeholder:"_"});
+
     // аккордеоны
     $('.js-accordeon').click(function() {
         let accordIsOpen = $(this).parent().hasClass('accordeon_active');
