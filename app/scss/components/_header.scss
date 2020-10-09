@@ -181,14 +181,14 @@
 
 	&.page-green {
 		.header {
-			// .logo {
-			// 	.logo-image {
-			// 		background-image: url(/img/img/img-logo-yellow.svg);
-			// 	}
-			// 	&::before {
-			// 		background-image: url(/img/bg-page-deco/bg-logo-green.svg);
-			// 	}
-			// }
+			.logo {
+				// .logo-image {
+				// 	background-image: url(/img/img/img-logo-yellow.svg);
+				// }
+				&::before {
+					background-image: url(/img/bg-page-deco/bg-logo-green.svg);
+				}
+			}
 			.header-tel path {
 				fill: $g-color-yellow;
 			}
@@ -204,14 +204,14 @@
 
 	&.page-red {
 		.header {
-			// .logo {
-			// 	.logo-image {
-			// 		background-image: url(/img/img/img-logo-yellow.svg);
-			// 	}
-			// 	&::before {
-			// 		background-image: url(/img/bg-page-deco/bg-logo-red.svg);
-			// 	}
-			// }
+			.logo {
+				// .logo-image {
+				// 	background-image: url(/img/img/img-logo-yellow.svg);
+				// }
+				&::before {
+					background-image: url(/img/bg-page-deco/bg-logo-red.svg);
+				}
+			}
 			.header-tel path {
 				fill: $g-color-yellow;
 			}
@@ -227,14 +227,14 @@
 
 	&.page-yellow {
 		.header {
-			// .logo {
-			// 	.logo-image {
-			// 		background-image: url(/img/img/img-logo-red.svg);
-			// 	}
-			// 	&::before {
-			// 		background-image: url(/img/bg-page-deco/bg-logo-yellow.svg);
-			// 	}
-			// }
+			.logo {
+				// .logo-image {
+				// 	background-image: url(/img/img/img-logo-red.svg);
+				// }
+				&::before {
+					background-image: url(/img/bg-page-deco/bg-logo-yellow.svg);
+				}
+			}
 			.header-tel path {
 				fill: $g-color-red;
 			}
@@ -250,14 +250,14 @@
 
 	&.page-orange {
 		.header {
-			// .logo {
-			// 	.logo-image {
-			// 		background-image: url(/img/img/img-logo-red.svg);
-			// 	}
-			// 	&::before {
-			// 		background-image: url(/img/bg-page-deco/bg-logo-orange.svg);
-			// 	}
-			// }
+			.logo {
+				// .logo-image {
+				// 	background-image: url(/img/img/img-logo-red.svg);
+				// }
+				&::before {
+					background-image: url(/img/bg-page-deco/bg-logo-orange.svg);
+				}
+			}
 			.header-tel path {
 				fill: $g-color-red;
 			}
@@ -274,14 +274,14 @@
 
 	&.page-violet {
 		.header {
-			// .logo {
-			// 	.logo-image {
-			// 		background-image: url(/img/img/img-logo-yellow.svg);
-			// 	}
-			// 	&::before {
-			// 		background-image: url(/img/bg-page-deco/bg-logo-violet.svg);
-			// 	}
-			// }
+			.logo {
+				// .logo-image {
+				// 	background-image: url(/img/img/img-logo-yellow.svg);
+				// }
+				&::before {
+					background-image: url(/img/bg-page-deco/bg-logo-violet.svg);
+				}
+			}
 			.header-tel path {
 				fill: $g-color-yellow;
 			}
@@ -297,14 +297,14 @@
 
 	&.page-brown {
 		.header {
-			// .logo {
-			// 	.logo-image {
-			// 		background-image: url(/img/img/img-logo-red.svg);
-			// 	}
-			// 	&::before {
-			// 		background-image: url(/img/bg-page-deco/bg-logo-brown.svg);
-			// 	}
-			// }
+			.logo {
+				// .logo-image {
+				// 	background-image: url(/img/img/img-logo-red.svg);
+				// }
+				&::before {
+					background-image: url(/img/bg-page-deco/bg-logo-brown.svg);
+				}
+			}
 			.header-tel path {
 				fill: $g-color-red;
 			}
@@ -319,14 +319,14 @@
 
 	&.page-pink {
 		.header {
-			// .logo {
-			// 	.logo-image {
-			// 			background-image: url(/img/img/img-logo-yellow.svg);
-			// 		}
-			// 	&::before {
-			// 		background-image: url(/img/bg-page-deco/bg-logo-pink.svg);
-			// 	}
-			// }
+			.logo {
+				// .logo-image {
+				// 		background-image: url(/img/img/img-logo-yellow.svg);
+				// 	}
+				&::before {
+					background-image: url(/img/bg-page-deco/bg-logo-pink.svg);
+				}
+			}
 			.header-tel path {
 				fill: $g-color-yellow;
 			}
