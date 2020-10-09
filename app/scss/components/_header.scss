@@ -11,17 +11,17 @@
 		position: relative;
 		flex: 0 0 255px;
 		width: 255px;
-		height: 56px;
+		height: 80px;
 		z-index: 1;
 		transition: 300ms;
-		&:hover {
-			.logo-image::after {
-				animation: anim-logo1 300ms;
-			}
-			.logo-image::before {
-				animation: anim-logo2 400ms;
-			}
-		}
+		// &:hover {
+		// 	.logo-image::after {
+		// 		animation: anim-logo1 300ms;
+		// 	}
+		// 	.logo-image::before {
+		// 		animation: anim-logo2 400ms;
+		// 	}
+		// }
 		&::before {
 			position: absolute;
 			content: '';
@@ -42,26 +42,27 @@
 			display: block;
 			width: 100%;
 			height: 100%;
-			background-image: url(/img/img/img-logo-red.svg);
+			background-image: url(/img/logo.png);
 			@include bg-contain;
 			transition: 300ms;
-			&::before,
 			&::after {
 				position: absolute;
 			    content: '';
-			    left: 109px;
-			    top: 1px;
-			    width: 43px;
-			    height: 43px;
+			    right: 42px;
+			    top: 20px;
+			    width: 60px;
+			    height: 60px;
+				background-image: url(/img/logo-cog.png);
 			    @include bg-contain;
 			    transition: 300ms;
+			    animation: cog-rotation linear 20s infinite;
 			}
-			&::before {
-				background-image: url(/img/img/img-logo-deco-1.svg);
-			}
-			&::after {
-				background-image: url(/img/img/img-logo-deco-2.svg);
-			}
+		}
+	}
+	@keyframes cog-rotation {
+		0% {}
+		100% {
+			transform: rotate(360deg);
 		}
 	}
 	.header-nav {
@@ -180,14 +181,14 @@
 
 	&.page-green {
 		.header {
-			.logo {
-				.logo-image {
-					background-image: url(/img/img/img-logo-yellow.svg);
-				}
-				&::before {
-					background-image: url(/img/bg-page-deco/bg-logo-green.svg);
-				}
-			}
+			// .logo {
+			// 	.logo-image {
+			// 		background-image: url(/img/img/img-logo-yellow.svg);
+			// 	}
+			// 	&::before {
+			// 		background-image: url(/img/bg-page-deco/bg-logo-green.svg);
+			// 	}
+			// }
 			.header-tel path {
 				fill: $g-color-yellow;
 			}
@@ -203,14 +204,14 @@
 
 	&.page-red {
 		.header {
-			.logo {
-				.logo-image {
-					background-image: url(/img/img/img-logo-yellow.svg);
-				}
-				&::before {
-					background-image: url(/img/bg-page-deco/bg-logo-red.svg);
-				}
-			}
+			// .logo {
+			// 	.logo-image {
+			// 		background-image: url(/img/img/img-logo-yellow.svg);
+			// 	}
+			// 	&::before {
+			// 		background-image: url(/img/bg-page-deco/bg-logo-red.svg);
+			// 	}
+			// }
 			.header-tel path {
 				fill: $g-color-yellow;
 			}
@@ -226,14 +227,14 @@
 
 	&.page-yellow {
 		.header {
-			.logo {
-				.logo-image {
-					background-image: url(/img/img/img-logo-red.svg);
-				}
-				&::before {
-					background-image: url(/img/bg-page-deco/bg-logo-yellow.svg);
-				}
-			}
+			// .logo {
+			// 	.logo-image {
+			// 		background-image: url(/img/img/img-logo-red.svg);
+			// 	}
+			// 	&::before {
+			// 		background-image: url(/img/bg-page-deco/bg-logo-yellow.svg);
+			// 	}
+			// }
 			.header-tel path {
 				fill: $g-color-red;
 			}
@@ -249,14 +250,14 @@
 
 	&.page-orange {
 		.header {
-			.logo {
-				.logo-image {
-					background-image: url(/img/img/img-logo-red.svg);
-				}
-				&::before {
-					background-image: url(/img/bg-page-deco/bg-logo-orange.svg);
-				}
-			}
+			// .logo {
+			// 	.logo-image {
+			// 		background-image: url(/img/img/img-logo-red.svg);
+			// 	}
+			// 	&::before {
+			// 		background-image: url(/img/bg-page-deco/bg-logo-orange.svg);
+			// 	}
+			// }
 			.header-tel path {
 				fill: $g-color-red;
 			}
@@ -273,14 +274,14 @@
 
 	&.page-violet {
 		.header {
-			.logo {
-				.logo-image {
-					background-image: url(/img/img/img-logo-yellow.svg);
-				}
-				&::before {
-					background-image: url(/img/bg-page-deco/bg-logo-violet.svg);
-				}
-			}
+			// .logo {
+			// 	.logo-image {
+			// 		background-image: url(/img/img/img-logo-yellow.svg);
+			// 	}
+			// 	&::before {
+			// 		background-image: url(/img/bg-page-deco/bg-logo-violet.svg);
+			// 	}
+			// }
 			.header-tel path {
 				fill: $g-color-yellow;
 			}
@@ -296,14 +297,14 @@
 
 	&.page-brown {
 		.header {
-			.logo {
-				.logo-image {
-					background-image: url(/img/img/img-logo-red.svg);
-				}
-				&::before {
-					background-image: url(/img/bg-page-deco/bg-logo-brown.svg);
-				}
-			}
+			// .logo {
+			// 	.logo-image {
+			// 		background-image: url(/img/img/img-logo-red.svg);
+			// 	}
+			// 	&::before {
+			// 		background-image: url(/img/bg-page-deco/bg-logo-brown.svg);
+			// 	}
+			// }
 			.header-tel path {
 				fill: $g-color-red;
 			}
@@ -318,14 +319,14 @@
 
 	&.page-pink {
 		.header {
-			.logo {
-				.logo-image {
-						background-image: url(/img/img/img-logo-yellow.svg);
-					}
-				&::before {
-					background-image: url(/img/bg-page-deco/bg-logo-pink.svg);
-				}
-			}
+			// .logo {
+			// 	.logo-image {
+			// 			background-image: url(/img/img/img-logo-yellow.svg);
+			// 		}
+			// 	&::before {
+			// 		background-image: url(/img/bg-page-deco/bg-logo-pink.svg);
+			// 	}
+			// }
 			.header-tel path {
 				fill: $g-color-yellow;
 			}
@@ -351,101 +352,12 @@
 	.header {
 		.logo {
 			.logo-image {
-				background-image: url(/img/img/img-logo-red-full.svg);
-				&::before,
+				background-image: url(/img/logo-static.png);
 				&::after {display: none;}
 			}
 		}
 		.soc {
 			margin-right: 10px;
-		}
-	}
-
-
-	// colors
-	.wrapper {
-
-
-		&.page-green {
-			.header {
-				.logo {
-					.logo-image {
-						background-image: url(/img/img/img-logo-yellow-full.svg);
-					}
-				}
-			}
-		}
-
-
-
-		&.page-red {
-			.header {
-				.logo {
-					.logo-image {
-						background-image: url(/img/img/img-logo-yellow-full.svg);
-					}
-				}
-			}
-		}
-
-
-
-		&.page-yellow {
-			.header {
-				.logo {
-					.logo-image {
-						background-image: url(/img/img/img-logo-red-full.svg);
-					}
-				}
-			}
-		}
-
-
-
-		&.page-orange {
-			.header {
-				.logo {
-					.logo-image {
-						background-image: url(/img/img/img-logo-red-full.svg);
-					}
-				}
-			}
-		}
-
-
-
-
-		&.page-violet {
-			.header {
-				.logo {
-					.logo-image {
-						background-image: url(/img/img/img-logo-yellow-full.svg);
-					}
-				}
-			}
-		}
-
-
-
-		&.page-brown {
-			.header {
-				.logo {
-					.logo-image {
-						background-image: url(/img/img/img-logo-red-full.svg);
-					}
-				}
-			}
-		}
-
-
-		&.page-pink {
-			.header {
-				.logo {
-					.logo-image {
-						background-image: url(/img/img/img-logo-yellow-full.svg);
-					}
-				}
-			}
 		}
 	}
 }

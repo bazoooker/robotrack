@@ -634,7 +634,7 @@
 		.logo {
 		    flex: 0 0 170px;
 		    width: 170px;
-		    height: 36px;
+		    height: 60px;
 		    &::before {
 		    	width: 700px;
     			height: 464px;
@@ -835,13 +835,7 @@
 		.logo {
 		    flex: 0 0 150px;
 		    width: 150px;
-		    height: 32px;
-		    &::before {
-		    	width: 580px;
-			    height: 297px;
-			    right: -63px;
-			    top: -26px;
-		    }
+		    height: 42px;
 		}
 		.btn-burger {
 			margin-left: auto;

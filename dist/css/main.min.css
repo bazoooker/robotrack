@@ -13635,13 +13635,9 @@ button.swiper-pagination-bullet {
     position: relative;
     flex: 0 0 255px;
     width: 255px;
-    height: 56px;
+    height: 80px;
     z-index: 1;
     transition: 300ms; }
-    .header .logo:hover .logo-image::after {
-      animation: anim-logo1 300ms; }
-    .header .logo:hover .logo-image::before {
-      animation: anim-logo2 400ms; }
     .header .logo::before {
       position: absolute;
       content: '';
@@ -13661,26 +13657,29 @@ button.swiper-pagination-bullet {
       display: block;
       width: 100%;
       height: 100%;
-      background-image: url(/img/img/img-logo-red.svg);
+      background-image: url(/img/logo.png);
       background-position: 50% 50%;
       background-size: contain;
       background-repeat: no-repeat;
       transition: 300ms; }
-      .header .logo .logo-image::before, .header .logo .logo-image::after {
+      .header .logo .logo-image::after {
         position: absolute;
         content: '';
-        left: 109px;
-        top: 1px;
-        width: 43px;
-        height: 43px;
+        right: 42px;
+        top: 20px;
+        width: 60px;
+        height: 60px;
+        background-image: url(/img/logo-cog.png);
         background-position: 50% 50%;
         background-size: contain;
         background-repeat: no-repeat;
-        transition: 300ms; }
-      .header .logo .logo-image::before {
-        background-image: url(/img/img/img-logo-deco-1.svg); }
-      .header .logo .logo-image::after {
-        background-image: url(/img/img/img-logo-deco-2.svg); }
+        transition: 300ms;
+        animation: cog-rotation linear 20s infinite; }
+
+@keyframes cog-rotation {
+  0% { }
+  100% {
+    transform: rotate(360deg); } }
   .header .header-nav {
     margin: 0 30px 0 auto;
     height: 100%;
@@ -13768,23 +13767,11 @@ button.swiper-pagination-bullet {
     opacity: 1;
     transform: scale(1.14); } }
 
-.wrapper.page-green .header .logo .logo-image {
-  background-image: url(/img/img/img-logo-yellow.svg); }
-
-.wrapper.page-green .header .logo::before {
-  background-image: url(/img/bg-page-deco/bg-logo-green.svg); }
-
 .wrapper.page-green .header .header-tel path {
   fill: #FFBF01; }
 
 .wrapper.page-green .header .header-nav-link::before {
   background-color: #FFBF01; }
-
-.wrapper.page-red .header .logo .logo-image {
-  background-image: url(/img/img/img-logo-yellow.svg); }
-
-.wrapper.page-red .header .logo::before {
-  background-image: url(/img/bg-page-deco/bg-logo-red.svg); }
 
 .wrapper.page-red .header .header-tel path {
   fill: #FFBF01; }
@@ -13792,23 +13779,11 @@ button.swiper-pagination-bullet {
 .wrapper.page-red .header .header-nav-link::before {
   background-color: #FFBF01; }
 
-.wrapper.page-yellow .header .logo .logo-image {
-  background-image: url(/img/img/img-logo-red.svg); }
-
-.wrapper.page-yellow .header .logo::before {
-  background-image: url(/img/bg-page-deco/bg-logo-yellow.svg); }
-
 .wrapper.page-yellow .header .header-tel path {
   fill: #FE4A51; }
 
 .wrapper.page-yellow .header .header-nav-link::before {
   background-color: #FE4A51; }
-
-.wrapper.page-orange .header .logo .logo-image {
-  background-image: url(/img/img/img-logo-red.svg); }
-
-.wrapper.page-orange .header .logo::before {
-  background-image: url(/img/bg-page-deco/bg-logo-orange.svg); }
 
 .wrapper.page-orange .header .header-tel path {
   fill: #FE4A51; }
@@ -13816,35 +13791,17 @@ button.swiper-pagination-bullet {
 .wrapper.page-orange .header .header-nav-link::before {
   background-color: #FE4A51; }
 
-.wrapper.page-violet .header .logo .logo-image {
-  background-image: url(/img/img/img-logo-yellow.svg); }
-
-.wrapper.page-violet .header .logo::before {
-  background-image: url(/img/bg-page-deco/bg-logo-violet.svg); }
-
 .wrapper.page-violet .header .header-tel path {
   fill: #FFBF01; }
 
 .wrapper.page-violet .header .header-nav-link::before {
   background-color: #FFBF01; }
 
-.wrapper.page-brown .header .logo .logo-image {
-  background-image: url(/img/img/img-logo-red.svg); }
-
-.wrapper.page-brown .header .logo::before {
-  background-image: url(/img/bg-page-deco/bg-logo-brown.svg); }
-
 .wrapper.page-brown .header .header-tel path {
   fill: #FE4A51; }
 
 .wrapper.page-brown .header .header-nav-link::before {
   background-color: #FE4A51; }
-
-.wrapper.page-pink .header .logo .logo-image {
-  background-image: url(/img/img/img-logo-yellow.svg); }
-
-.wrapper.page-pink .header .logo::before {
-  background-image: url(/img/bg-page-deco/bg-logo-pink.svg); }
 
 .wrapper.page-pink .header .header-tel path {
   fill: #FFBF01; }
@@ -13854,25 +13811,11 @@ button.swiper-pagination-bullet {
 
 @media screen and (max-width: 1200px) {
   .header .logo .logo-image {
-    background-image: url(/img/img/img-logo-red-full.svg); }
-    .header .logo .logo-image::before, .header .logo .logo-image::after {
+    background-image: url(/img/logo-static.png); }
+    .header .logo .logo-image::after {
       display: none; }
   .header .soc {
-    margin-right: 10px; }
-  .wrapper.page-green .header .logo .logo-image {
-    background-image: url(/img/img/img-logo-yellow-full.svg); }
-  .wrapper.page-red .header .logo .logo-image {
-    background-image: url(/img/img/img-logo-yellow-full.svg); }
-  .wrapper.page-yellow .header .logo .logo-image {
-    background-image: url(/img/img/img-logo-red-full.svg); }
-  .wrapper.page-orange .header .logo .logo-image {
-    background-image: url(/img/img/img-logo-red-full.svg); }
-  .wrapper.page-violet .header .logo .logo-image {
-    background-image: url(/img/img/img-logo-yellow-full.svg); }
-  .wrapper.page-brown .header .logo .logo-image {
-    background-image: url(/img/img/img-logo-red-full.svg); }
-  .wrapper.page-pink .header .logo .logo-image {
-    background-image: url(/img/img/img-logo-yellow-full.svg); } }
+    margin-right: 10px; } }
 
 .footer {
   position: relative;
@@ -15929,7 +15872,7 @@ button.swiper-pagination-bullet {
   .header .logo {
     flex: 0 0 170px;
     width: 170px;
-    height: 36px; }
+    height: 60px; }
     .header .logo::before {
       width: 700px;
       height: 464px; }
@@ -16055,12 +15998,7 @@ button.swiper-pagination-bullet {
     .header .logo {
       flex: 0 0 150px;
       width: 150px;
-      height: 32px; }
-      .header .logo::before {
-        width: 580px;
-        height: 297px;
-        right: -63px;
-        top: -26px; }
+      height: 42px; }
     .header .btn-burger {
       margin-left: auto; }
     .header .header-tel {
